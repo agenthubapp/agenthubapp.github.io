@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# logs / temp
+*.log
+_diag*.html
+_h.html
+
+# local build/distribution artifacts (the .dmg ships as a GitHub Release asset, not in-repo)
+*.dmg
+*.zip

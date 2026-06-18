@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" font-family="'Geist','Inter',system-ui,sans-serif">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.2" cy="0.0" r="0.9">
+      <stop offset="0" stop-color="#6366f1" stop-opacity="0.35"/>
+      <stop offset="0.5" stop-color="#6366f1" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="txt" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c4b5fd"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="#0a0b10"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- brand mark -->
+  <g transform="translate(96 150)">
+    <rect width="120" height="120" rx="28" fill="url(#g)"/>
+    <g transform="translate(26 26) scale(2.83)" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"/>
+      <path d="m7 16.5-4.74-2.85"/>
+      <path d="m7 16.5 5-3"/>
+      <path d="M7 16.5v5.17"/>
+      <path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"/>
+      <path d="m17 16.5-5-3"/>
+      <path d="m17 16.5 4.74-2.85"/>
+      <path d="M17 16.5v5.17"/>
+      <path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z"/>
+      <path d="M12 8 7.26 5.15"/>
+      <path d="m12 8 4.74-2.85"/>
+      <path d="M12 13.5V8"/>
+    </g>
+  </g>
+
+  <text x="240" y="212" fill="#7c7f8a" font-size="26" font-weight="600" letter-spacing="6">LOCAL-FIRST MISSION CONTROL</text>
+  <text x="238" y="300" fill="url(#txt)" font-size="92" font-weight="700" letter-spacing="-3">AgentHub</text>
+
+  <text x="96" y="430" fill="#e7e8ec" font-size="40" font-weight="600" letter-spacing="-1">Ship Jira tickets with AI agents — end to end, on your Mac.</text>
+
+  <g transform="translate(96 484)" font-size="24" font-weight="500" fill="#9ca0ad">
+    <text x="0" y="0">Jira board</text>
+    <text x="150" y="0" fill="#6366f1">→</text>
+    <text x="180" y="0">Context Pack</text>
+    <text x="360" y="0" fill="#6366f1">→</text>
+    <text x="390" y="0">Agent worktree</text>
+    <text x="600" y="0" fill="#6366f1">→</text>
+    <text x="630" y="0">Deep QA gate</text>
+    <text x="822" y="0" fill="#6366f1">→</text>
+    <text x="852" y="0">Draft PR</text>
+  </g>
+
+  <rect x="96" y="540" width="1008" height="1" fill="#ffffff" fill-opacity="0.08"/>
+  <text x="96" y="582" fill="#7c7f8a" font-size="22" font-weight="500">Codex · Devin · Autopilot · Local RAG wiki · UI-vs-Figma proof · Metrics</text>
+</svg>
