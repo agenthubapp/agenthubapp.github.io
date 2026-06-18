@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AgentHub — Local-first mission control for AI coding agents</title>
-  <meta name="description" content="AgentHub turns Jira tickets into reviewed pull requests. A local-first mission control that drives Codex and Devin through context, code, a deep QA gate, and a Draft PR — entirely on your Mac. Zero infra." />
+  <meta name="description" content="AgentHub turns Jira tickets into reviewed pull requests. A local-first mission control that drives your AI coding agent — Codex, Devin, or any CLI you run — through context, code, a deep QA gate, and a Draft PR. Runs entirely on your Mac. Zero infra." />
   <meta name="theme-color" content="#0a0b10" />
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -83,6 +83,7 @@
       <a href="#quality">Quality</a>
       <a href="#autopilot">Autopilot</a>
       <a href="#security">Local-first</a>
+      <a href="changelog.html">Changelog</a>
     </nav>
     <div class="nav-right">
       <a class="btn btn-ghost" href="#start">Get started</a>
@@ -98,6 +99,7 @@
     <a href="#quality">Quality</a>
     <a href="#autopilot">Autopilot</a>
     <a href="#security">Local-first</a>
+    <a href="changelog.html">Changelog</a>
     <a href="#start">Get started</a>
   </div>
 </header>
@@ -115,9 +117,9 @@
         </a>
         <h1>Turn Jira tickets into <span class="grad-text">reviewed pull requests.</span></h1>
         <p class="hero-sub">
-          AgentHub is a local-first mission control that drives <b>Codex</b> and <b>Devin</b> through your
-          entire workflow — context, code, tests, a deep QA gate, and a Draft PR — for every ticket.
-          It runs entirely on your Mac. Zero infra.
+          AgentHub is a local-first mission control that puts <b>your AI coding agent</b> — whatever CLI
+          you run, like Codex or Devin — to work on every ticket: context, code, tests, a deep QA gate,
+          and a Draft PR. All on your Mac. Zero infra.
         </p>
         <div class="hero-cta">
           <a class="btn btn-primary btn-lg" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/latest">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -203,6 +205,47 @@
     </div>
   </section>
 
+  <!-- ============ highlights / why ============ -->
+  <section class="section-pad" id="why">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow"><span class="dot"></span> Why AgentHub</span>
+        <h2>Not just another agent runner.</h2>
+        <p>Plenty of tools can launch an agent. AgentHub is the part that makes what it produces actually mergeable.</p>
+      </div>
+      <div class="highlights">
+        <div class="highlight reveal">
+          <div class="hi"><svg aria-hidden="true"><use href="#i-shield"/></svg></div>
+          <div>
+            <h3>A QA gate that self-heals</h3>
+            <p>Build, test, lint, diff-coverage, a cross-model AI review and security scans run on every change. When something fails, AgentHub feeds the errors back and the agent retries — <span class="kbd">before</span> it ever pings you.</p>
+          </div>
+        </div>
+        <div class="highlight reveal">
+          <div class="hi"><svg aria-hidden="true"><use href="#i-cpu"/></svg></div>
+          <div>
+            <h3>Research-grade RAG, 100% local</h3>
+            <p>Hybrid retrieval, LLM reranking, query expansion and contextual chunks — powered by local Ollama models. Your code and context <span class="kbd">never leave your Mac</span>.</p>
+          </div>
+        </div>
+        <div class="highlight reveal">
+          <div class="hi"><svg aria-hidden="true"><use href="#i-zap"/></svg></div>
+          <div>
+            <h3>A backlog in, a stack of PRs out</h3>
+            <p>Autopilot's conflict-aware scheduler runs tickets in parallel where they're safe, sequential where they collide, and opens a <span class="kbd">Draft PR</span> for each.</p>
+          </div>
+        </div>
+        <div class="highlight reveal">
+          <div class="hi"><svg aria-hidden="true"><use href="#i-image"/></svg></div>
+          <div>
+            <h3>It builds to your design</h3>
+            <p>For UI work it extracts a grounded spec from Figma at plan time, builds to it, then scores the running screen against your <span class="kbd">agreed tokens</span> — not just a screenshot.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ how it works ============ -->
   <section class="section-pad" id="how">
     <div class="container">
@@ -265,8 +308,8 @@
 
         <article class="feature-card reveal">
           <div class="feature-icon"><svg aria-hidden="true"><use href="#i-bot"/></svg></div>
-          <h3>Codex &amp; Devin</h3>
-          <p>Local CLI agents work in a per-ticket git worktree branched off <code>develop</code>. Up to three runs in parallel, with a per-agent model picker.</p>
+          <h3>Bring your own agent</h3>
+          <p>AgentHub drives whatever AI coding CLI you run — Codex, Devin, or your own — each in its own per-ticket git worktree off <code>develop</code>. Up to three in parallel, with a per-agent model picker.</p>
         </article>
 
         <article class="feature-card reveal">
@@ -583,7 +626,7 @@
           </div>
           <div class="start-step">
             <div class="si">3</div>
-            <div><h4>Assign an agent</h4><p>Sign in to <code>codex</code>, <code>devin</code> and <code>gh</code> from the System check, then run a ticket end to end.</p></div>
+            <div><h4>Assign an agent</h4><p>Sign in to your agent CLI (e.g. <code>codex</code> or <code>devin</code>) plus <code>gh</code> from the System check, then run a ticket end to end.</p></div>
           </div>
           <div class="start-step">
             <div class="si"><svg width="15" height="15" style="color:#c7c8ff" aria-hidden="true"><use href="#i-spark"/></svg></div>
@@ -632,6 +675,7 @@
         <div class="foot-col">
           <h5>Resources</h5>
           <a href="#start">Get started</a>
+          <a href="changelog.html">Changelog</a>
           <a href="#security">Local-first &amp; security</a>
           <a href="#features">Knowledge &amp; RAG</a>
         </div>
@@ -639,7 +683,7 @@
           <h5>Built with</h5>
           <a href="#features">Next.js &amp; React</a>
           <a href="#security">Prisma &amp; SQLite</a>
-          <a href="#features">Codex · Devin · Ollama</a>
+          <a href="#features">Bring-your-own agent · Ollama</a>
         </div>
       </div>
     </div>

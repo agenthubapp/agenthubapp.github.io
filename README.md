@@ -6,7 +6,8 @@ AI coding agents. Pure static site — **no build step, no dependencies, no fram
 ## Files
 
 ```
-index.html      # the whole page (semantic sections + an inline SVG icon sprite)
+index.html      # the landing page (semantic sections + an inline SVG icon sprite)
+changelog.html  # the changelog page (shares styles.css + app.js)
 styles.css      # dark "Linear-style" theme — indigo→violet, hairline borders, responsive
 app.js          # sticky-nav state, mobile menu, scroll-reveal, copy-to-clipboard, footer year
 assets/

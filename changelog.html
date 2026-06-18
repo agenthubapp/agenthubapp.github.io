@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Changelog — AgentHub</title>
+  <meta name="description" content="What's new in AgentHub — releases, features and fixes for the local-first mission control for AI coding agents." />
+  <meta name="theme-color" content="#0a0b10" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Changelog — AgentHub" />
+  <meta property="og:description" content="What's new in AgentHub — releases, features and fixes." />
+  <meta property="og:image" content="assets/og.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- icon sprite (subset) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+</svg>
+
+<div class="bg-decor" aria-hidden="true">
+  <div class="grid"></div>
+  <div class="glow a"></div>
+  <div class="glow b"></div>
+</div>
+
+<!-- nav -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html" aria-label="AgentHub home">
+      <img class="mark" src="assets/favicon.svg" alt="" width="30" height="30" />
+      AgentHub
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#quality">Quality</a>
+      <a href="index.html#autopilot">Autopilot</a>
+      <a href="index.html#security">Local-first</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-ghost" href="index.html#start">Get started</a>
+      <a class="btn btn-primary" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/latest">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="22"><use id="navToggleIcon" href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#how">How it works</a>
+    <a href="index.html#features">Features</a>
+    <a href="index.html#quality">Quality</a>
+    <a href="index.html#autopilot">Autopilot</a>
+    <a href="index.html#security">Local-first</a>
+    <a href="index.html#start">Get started</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="section-pad">
+    <div class="container">
+      <div class="page-head reveal">
+        <span class="eyebrow"><span class="dot"></span> Changelog</span>
+        <h1>What's new in AgentHub</h1>
+        <p>A running log of releases, features and fixes. Newest first.</p>
+      </div>
+
+      <div class="timeline">
+
+        <article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v3.0 — Native macOS app</span>
+            <span class="rel-tag">Latest</span>
+            <span class="rel-date">Jun 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>AgentHub leaves the terminal.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Ships as a <b>signed &amp; notarized .dmg</b> — install it like any Mac app, no command line required.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Self-running app shell</b> (Electron) bundling the web app + Jira worker; your data lives in Application Support.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Open on phone</b> — a QR code and a stable Tailscale URL, with a Doctor connectivity check.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Login-shell PATH resolution</b> so the Finder-launched app finds your CLIs (your agent, <code>gh</code>, <code>tuist</code>…).</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">Hardening &amp; Metrics</span>
+            <span class="rel-date">Jun 7, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>Security, durability and visibility.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Optional shared-token auth</b> on every page and API; Jira tokens <b>encrypted at-rest</b> (AES-256-GCM).</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>SQLite <b>WAL + busy-timeout</b>, Prisma Migrate, and a one-command <b>VACUUM-INTO backup</b>.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Metrics dashboard</b> — outcomes, success / verify-green rates, diff-coverage, PRs, run time and token cost.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Vitest</b> suites for the gate / state-machine / crypto logic, wired into <b>GitHub Actions CI</b>.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">Deep QA, Knowledge &amp; Autopilot</span>
+            <span class="rel-date">Jun 6, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>The quality engine and the brain.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Deep QA engine</b> — diff-coverage, quality gates + a bounded <b>auto-fix loop</b>, cross-model AI review and a plan-checker.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Security &amp; dead-code scans</b> (gitleaks, semgrep, periphery) plus a Quality Scorecard on every PR.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Project Wiki</b> with local semantic search (Ollama bge-m3), Confluence import and attachments → context (videos → frames).</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Ask</b> — project Q&amp;A grounded in your wiki, tickets and runs.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Autopilot</b> — batch runs with a conflict-aware scheduler → a Draft PR per ticket, plus a realtime agent log.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">Agent execution &amp; worktrees</span>
+            <span class="rel-date">Jun 4, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>Agents that edit real branches.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Full run lifecycle + a <b>plan-review gate</b> (approve, or request changes → it replans).</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Per-ticket git worktrees</b> (branch = the ticket key off <code>develop</code>); up to <b>3 runs in parallel</b>.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Local Changes card</b> — review the diff, commit (conventional) and open a PR when you're happy.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Works with whatever agent CLI you run — not locked to any one vendor.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">Context Pack</span>
+            <span class="rel-date">Jun 4, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>Give the agent the full picture.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Per-ticket <b>Context Pack</b> aggregating Jira, Confluence, Figma links and related repo history.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Token-budgeted</b>, with per-source status and one-click copy.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">Orchestration shell</span>
+            <span class="rel-date">Jun 4, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>The mission-control foundation.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Live Jira board</b> (six columns) synced by a standalone polling worker.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Ticket workspace, settings, an "only my tickets" filter, and SQLite persistence — <b>zero infra</b>.</span></li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+
+      <div style="text-align:center; margin-top:48px">
+        <a class="btn btn-ghost" href="index.html"><svg aria-hidden="true"><use href="#i-back"/></svg> Back to home</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- footer -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html">
+          <img class="mark" src="assets/favicon.svg" alt="" width="30" height="30" />
+          AgentHub
+        </a>
+        <p>Local-first mission control for Jira tickets and AI coding agents. Runs on your Mac, with zero infra.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h5>Product</h5>
+          <a href="index.html#how">How it works</a>
+          <a href="index.html#features">Features</a>
+          <a href="index.html#quality">Quality engine</a>
+          <a href="index.html#autopilot">Autopilot</a>
+        </div>
+        <div class="foot-col">
+          <h5>Resources</h5>
+          <a href="index.html#start">Get started</a>
+          <a href="changelog.html">Changelog</a>
+          <a href="index.html#security">Local-first &amp; security</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> AgentHub · Local-first power tool</span>
+      <span class="foot-note"><span class="sdot"></span> Built for one developer who ships like a team</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
