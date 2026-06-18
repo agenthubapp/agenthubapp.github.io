@@ -55,6 +55,13 @@ Add the domain in your host's dashboard and point DNS at it (an `ALIAS`/`CNAME` 
 - **Icons** are an inline `<svg>` sprite near the top of `index.html` (`<symbol id="i-…">`); reference
   one with `<svg><use href="#i-name"/></svg>`.
 
+### ⚠️ Cache-busting (important)
+GitHub Pages serves `styles.css` / `app.js` with `cache-control: max-age=600`, so browsers hold an
+old copy after a deploy. The links use a version query — `styles.css?v=2`, `app.js?v=2` — so **every
+time you edit `styles.css` or `app.js`, bump that number** (`?v=3`, `?v=4`, …) in **both** `index.html`
+and `changelog.html`. That forces browsers to fetch the new file immediately. (A hard refresh —
+`Cmd+Shift+R` — also works for testing.)
+
 ## Notes
 
 - The `git clone …` URL in the "Get started" terminal is a placeholder — swap in the real repo URL
