@@ -88,4 +88,24 @@
   /* --- footer year --- */
   var year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
+
+  /* --- Download buttons: point straight at the latest release's .dmg (one-click), and show its
+         version. Falls back to the static /releases/latest page link if the GitHub API is unreachable
+         (rate-limited / offline). No manual link edits needed on each release. --- */
+  var REPO = "agenthubapp/agenthubapp.github.io";
+  var dlButtons = document.querySelectorAll(".js-dl");
+  var verEl = document.getElementById("dlVersion");
+  if (dlButtons.length) {
+    fetch("https://api.github.com/repos/" + REPO + "/releases/latest", { headers: { Accept: "application/vnd.github+json" } })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (rel) {
+        if (!rel) return;
+        if (verEl && rel.tag_name) verEl.textContent = rel.tag_name;
+        var dmg = (rel.assets || []).filter(function (a) { return /\.dmg$/i.test(a.name); })[0];
+        if (dmg && dmg.browser_download_url) {
+          dlButtons.forEach(function (a) { a.setAttribute("href", dmg.browser_download_url); });
+        }
+      })
+      .catch(function () { /* keep the static /releases/latest fallback */ });
+  }
 })();
