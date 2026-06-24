@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AgentHub — Local-first mission control for AI coding agents</title>
-  <meta name="description" content="AgentHub turns Jira tickets into reviewed pull requests. A local-first mission control that drives your AI coding agent — Codex, Devin, or any CLI you run — through context, code, a deep QA gate, and a Draft PR. Runs entirely on your Mac. Zero infra." />
+  <meta name="description" content="AgentHub turns Jira tickets into reviewed pull requests. Mission Control workspace, live agent cockpit, deep QA gate, and Draft PRs — local-first on your Mac. Codex, Devin, or Cursor CLI." />
   <meta name="theme-color" content="#0a0b10" />
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -13,7 +13,7 @@
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="AgentHub — Mission control for AI coding agents" />
-  <meta property="og:description" content="Turn Jira tickets into reviewed pull requests — context, code, a deep QA gate, and a Draft PR for every ticket. Local-first, runs on your Mac." />
+  <meta property="og:description" content="Mission Control for Jira + AI agents — live cockpit, deep QA gate, Draft PRs. Local-first on your Mac." />
   <meta property="og:image" content="assets/og.svg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="AgentHub — Mission control for AI coding agents" />
@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=4" />
 </head>
 <body>
 
@@ -111,8 +111,8 @@
     <div class="container hero-grid">
       <div class="hero-copy">
         <a class="announce js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/latest">
-          <span class="tag" id="dlVersion">v0.2.0</span>
-          Now a signed, native macOS app — download
+          <span class="tag" id="dlVersion">v0.4.0</span>
+          Mission Control workspace + agent intelligence — download
           <svg class="arrow" width="15" height="15" aria-hidden="true"><use href="#i-arrow"/></svg>
         </a>
         <h1>Turn Jira tickets into <span class="grad-text">reviewed pull requests.</span></h1>
@@ -136,7 +136,7 @@
         <div class="window">
           <div class="win-bar">
             <div class="win-dots"><i></i><i></i><i></i></div>
-            <span class="win-title">agenthub — KUDO board</span>
+            <span class="win-title">agenthub — Mission Control</span>
             <span class="win-live"><span class="pulse"></span> live</span>
           </div>
           <div class="app-mock">
@@ -196,6 +196,7 @@
         <span class="tool"><svg aria-hidden="true"><use href="#i-kanban"/></svg> Jira</span>
         <span class="tool"><svg aria-hidden="true"><use href="#i-bot"/></svg> Codex</span>
         <span class="tool"><svg aria-hidden="true"><use href="#i-bot"/></svg> Devin</span>
+        <span class="tool"><svg aria-hidden="true"><use href="#i-bot"/></svg> Cursor</span>
         <span class="tool"><svg aria-hidden="true"><use href="#i-pr"/></svg> GitHub</span>
         <span class="tool"><svg aria-hidden="true"><use href="#i-image"/></svg> Figma</span>
         <span class="tool"><svg aria-hidden="true"><use href="#i-book"/></svg> Confluence</span>
@@ -214,6 +215,13 @@
         <p>Plenty of tools can launch an agent. AgentHub is the part that makes what it produces actually mergeable.</p>
       </div>
       <div class="highlights">
+        <div class="highlight reveal">
+          <div class="hi"><svg aria-hidden="true"><use href="#i-layers"/></svg></div>
+          <div>
+            <h3>Mission Control, not just a board</h3>
+            <p>Board or list view, a split detail workspace with live preview, run cockpit, and an inspector — plus <span class="kbd">⌘K</span> to jump anywhere. One screen to monitor every ticket.</p>
+          </div>
+        </div>
         <div class="highlight reveal">
           <div class="hi"><svg aria-hidden="true"><use href="#i-shield"/></svg></div>
           <div>
@@ -295,9 +303,15 @@
       <div class="features">
 
         <article class="feature-card reveal">
+          <div class="feature-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></div>
+          <h3>Mission Control workspace</h3>
+          <p>Board or list, then drill into a ticket: live run cockpit, diff preview, context, local changes, and an optional inspector — without leaving the flow.</p>
+        </article>
+
+        <article class="feature-card reveal">
           <div class="feature-icon"><svg aria-hidden="true"><use href="#i-kanban"/></svg></div>
           <h3>Live Jira board</h3>
-          <p>Six run- and PR-aware columns, refreshed continuously. Pause the agents or cancel a run straight from the card.</p>
+          <p>Six run- and PR-aware columns, refreshed continuously. Pause agents, cancel a run, or approve a plan straight from the card.</p>
         </article>
 
         <article class="feature-card reveal">
@@ -309,7 +323,7 @@
         <article class="feature-card reveal">
           <div class="feature-icon"><svg aria-hidden="true"><use href="#i-bot"/></svg></div>
           <h3>Bring your own agent</h3>
-          <p>AgentHub drives whatever AI coding CLI you run — Codex, Devin, or your own — each in its own per-ticket git worktree off <code>develop</code>. Up to three in parallel, with a per-agent model picker.</p>
+          <p>AgentHub drives Codex, Devin, or Cursor CLI — each in its own per-ticket git worktree. Smart routing picks fast vs deep models; up to three tickets in parallel.</p>
         </article>
 
         <article class="feature-card reveal">
@@ -357,7 +371,19 @@
         <article class="feature-card reveal">
           <div class="feature-icon"><svg aria-hidden="true"><use href="#i-chat"/></svg></div>
           <h3>Ask your project</h3>
-          <p>A Q&amp;A chat grounded in your wiki, tickets and runs — with clickable references back to the source.</p>
+          <p>Q&amp;A grounded in wiki, tickets, and code — with fast/deep routing, cross-session memory, visual answers (screenshot + Figma), and <b>review code → file Jira tickets</b>.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-icon"><svg aria-hidden="true"><use href="#i-spark"/></svg></div>
+          <h3>Today briefing</h3>
+          <p>A daily home feed: what needs you (approve plans, answer pauses, stale PRs), recent wins, and an LLM-written briefing from your project's activity.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-icon"><svg aria-hidden="true"><use href="#i-cpu"/></svg></div>
+          <h3>Agent Activity cockpit</h3>
+          <p>Live routing decisions, an activity feed, sub-agent tree, and a phase timeline — so you always know what the agent is doing and why.</p>
         </article>
 
         <article class="feature-card reveal">
@@ -368,8 +394,14 @@
 
         <article class="feature-card reveal">
           <div class="feature-icon"><svg aria-hidden="true"><use href="#i-phone"/></svg></div>
-          <h3>Mobile access</h3>
-          <p>Open AgentHub on your phone with a QR code and a stable Tailscale URL. Approve plans and watch runs from anywhere.</p>
+          <h3>Mobile + PiP</h3>
+          <p>Phone access over Tailscale — approve plans from push, watch runs, even a repo terminal. Pop out a floating PiP panel on desktop for always-on monitoring.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-icon"><svg aria-hidden="true"><use href="#i-terminal"/></svg></div>
+          <h3>Conflict resolution</h3>
+          <p>PR-level conflict detection, push/force-push when rebased, a manual 3-way hunk picker, or <b>resolve with agent</b> — with a guard that refuses to commit leftover markers.</p>
         </article>
 
       </div>
@@ -694,6 +726,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=3"></script>
+<script src="app.js?v=4"></script>
 </body>
 </html>

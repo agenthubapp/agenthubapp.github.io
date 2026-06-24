@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=4" />
 </head>
 <body>
 
@@ -80,8 +80,60 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.1.0 — Native macOS app</span>
+            <span class="rel-ver">v0.4.0 — Mission Control &amp; agent intelligence</span>
             <span class="rel-tag">Latest</span>
+            <span class="rel-date">Jun 22, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>A control room built for how you actually ship.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Mission Control workspace</b> — board or list, split detail + live preview + inspector, run cockpit, and per-ticket base branch.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>macOS-native shell</b> — vibrancy, SF Pro, Liquid Glass sidebar, grouped nav, <b>⌘K</b> command palette, and shortcut cheatsheet.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Today briefing</b> — a daily feed of what needs you, wins, and an LLM-written digest from your project activity.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Agent Activity cockpit</b> — live routing, activity feed, sub-agent tree, and phase timeline so runs are observable, not opaque.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Cursor CLI</b> as a third executor alongside Codex and Devin, with smart fast/deep routing per phase.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Ask upgrades</b> — cross-session memory, review code → file Jira tickets (AgentHub POSTs issues directly), visual answers with screenshot + Figma.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Conflict resolution</b> — PR mergeable state on GitHub, push/force-push, manual 3-way hunk picker, and agent-assisted resolve with marker guards.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Spec Steward</b> — decision book, spec contract, and auto-resolve for open plan questions so agents stay on-spec across tickets.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Learn-from-edits loop</b> — when you edit a merged PR, AgentHub distills corrections into wiki learnings for future runs.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Maestro regression sentinel</b>, <b>PiP pop-out panel</b>, <b>Android stack</b> support, and <b>~25–50× faster</b> warm RAG retrieval via vector cache.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.3.1</span>
+            <span class="rel-date">Jun 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>Packaging polish.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Terminal in the .app</b> — ships <code>node-pty</code> so the worktree terminal works in the packaged build.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Mobile terminal proxy</b> — <code>/terminal-ws</code> through the web port so Tailscale HTTPS can reach the worker PTY.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.3.0 — Ask, terminal &amp; notifications</span>
+            <span class="rel-date">Jun 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>Faster answers, deeper mobile access.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Ask fast path</b> — simple questions answer in under a second; deep questions route to a quality model.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Cross-session memory</b> and <b>review code → file tickets</b> from the Ask screen.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Mobile terminal</b> — full repo shell from your phone over Tailscale.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Native desktop notifications</b> + in-app update check; multi-project creds reuse and project delete.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.2.0 — Native macOS app</span>
             <span class="rel-date">Jun 2026</span>
           </div>
           <div class="rel-card">
@@ -91,6 +143,19 @@
               <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Self-running app shell</b> (Electron) bundling the web app + Jira worker; your data lives in Application Support.</span></li>
               <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Open on phone</b> — a QR code and a stable Tailscale URL, with a Doctor connectivity check.</span></li>
               <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Login-shell PATH resolution</b> so the Finder-launched app finds your CLIs (your agent, <code>gh</code>, <code>tuist</code>…).</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.1.0 — Foundation</span>
+            <span class="rel-date">Jun 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>The mission-control foundation.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Live Jira board</b>, Context Packs, agent worktrees, deep QA gate, Autopilot, Wiki + RAG, and Ask — all local-first on SQLite.</span></li>
             </ul>
           </div>
         </article>
@@ -215,6 +280,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=3"></script>
+<script src="app.js?v=4"></script>
 </body>
 </html>
