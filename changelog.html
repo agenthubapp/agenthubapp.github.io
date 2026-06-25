@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=11" />
+  <link rel="stylesheet" href="styles.css?v=12" />
 </head>
 <body>
 
@@ -80,8 +80,26 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.5.3 — Pop-out polish</span>
+            <span class="rel-ver">v0.5.4 — Agent reliability &amp; Needs Input UX</span>
             <span class="rel-tag">Latest</span>
+            <span class="rel-date">Jun 25, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>Ask Agent.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Ask Agent</b> — No more fake &quot;Updated N files&quot; replies; greetings stay read-only; only real model text or a clear CLI error</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Plan/exec failures</b> — Codex/Devin stderr (e.g. Windsurf permission denied) surfaces instead of silent &quot;(no plan output)&quot;</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Needs Input</b> — Hero panel with actionable guidance when a run pauses for you</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Settings / Doctor</b> — Warns when Codex default model may fail headless; adds default-model plan probe</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Run stream</b> — Smarter polling hooks and SSE fallback for live run panels</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Mission control</b> — Workspace, inspector, and activity panel polish</span></li>
+            </ul>
+          </div>
+        </article>
+
+<article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.5.3 — Pop-out polish</span>
             <span class="rel-date">Jun 25, 2026</span>
           </div>
           <div class="rel-card">
@@ -375,6 +393,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=11"></script>
+<script src="app.js?v=12"></script>
 </body>
 </html>
