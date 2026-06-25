@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=9" />
+  <link rel="stylesheet" href="styles.css?v=10" />
 </head>
 <body>
 
@@ -80,8 +80,24 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.5.1 — Electron PiP edge dock</span>
+            <span class="rel-ver">v0.5.2 — Claude Code + Devin fix</span>
             <span class="rel-tag">Latest</span>
+            <span class="rel-date">Jun 25, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>Claude Code.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Claude Code</b> — fourth agent executor (`claude` CLI): plan/execute, Ask, review, and Settings discovery when installed</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Devin Pro fix</b> — Settings no longer fails on a flaky headless probe; verifies login + tier only (probe opt-in via `AGENTHUB_PROBE_AGENTS=1`)</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Installed agents only</b> — Settings and run pickers list only CLIs found on PATH (Codex, Devin, Claude Code, Cursor)</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Board filter</b> — new &quot;High priority&quot; chip for urgent Jira tickets</span></li>
+            </ul>
+          </div>
+        </article>
+
+<article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.5.1 — Electron PiP edge dock</span>
             <span class="rel-date">Jun 25, 2026</span>
           </div>
           <div class="rel-card">
@@ -345,6 +361,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=8"></script>
+<script src="app.js?v=10"></script>
 </body>
 </html>
