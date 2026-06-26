@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=13" />
+  <link rel="stylesheet" href="styles.css?v=14" />
 </head>
 <body>
 
@@ -80,8 +80,25 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.5.5 — AI connection without .env</span>
+            <span class="rel-ver">v0.6.0 — Faster runs, reliable autopilot</span>
             <span class="rel-tag">Latest</span>
+            <span class="rel-date">Jun 26, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>Manual fast lane.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Manual fast lane</b> — diff-first iteration: see changes right after execute without waiting for full verify (on by default)</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Autopilot reliability</b> — batch items no longer stuck as &quot;running&quot;; auto runs proceed past untagged plan questions; Jira dep deadlocks fixed</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Smarter verify defaults</b> — autopilot fast lane off by default so auto PRs go through build/test; batch advisory PR opens draft PR on gate failures instead of pausing the whole batch</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>UI capture scope</b> — Figma matched to the right screen; wrong-screen captures block auto runs</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Pipeline knobs</b> — manual fast, unattended batch, batch advisory PR in Settings</span></li>
+            </ul>
+          </div>
+        </article>
+
+<article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.5.5 — AI connection without .env</span>
             <span class="rel-date">Jun 25, 2026</span>
           </div>
           <div class="rel-card">
@@ -411,6 +428,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=13"></script>
+<script src="app.js?v=14"></script>
 </body>
 </html>
