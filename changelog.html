@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=18" />
+  <link rel="stylesheet" href="styles.css?v=19" />
 </head>
 <body>
 
@@ -51,7 +51,7 @@
     </nav>
     <div class="nav-right">
       <a class="btn btn-ghost" href="index.html#start">Get started</a>
-      <a class="btn btn-primary js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.7.3/AgentHub-0.7.3-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-primary js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.8.0/AgentHub-0.8.0-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <svg width="22" height="22"><use id="navToggleIcon" href="#i-menu"/></svg>
       </button>
@@ -80,8 +80,25 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.7.3 — Edit projects &amp; fixed setup dialog</span>
+            <span class="rel-ver">v0.8.0 — beyond Jira, beyond mobile</span>
             <span class="rel-tag">Latest</span>
+            <span class="rel-date">Jul 3, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>GitHub Issues tracker.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>GitHub Issues tracker</b> — point a project at any `owner/repo` and AgentHub syncs its issues as tickets, using your existing `gh` CLI login. No token to paste, nothing stored. Issue labels like &quot;in progress&quot; and &quot;review&quot; land in the right board columns automatically.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Local-only projects</b> — no tracker at all: create tickets right in AgentHub with the new **New ticket** button (keys like `MYAPP-1`), run agents on them, and push them to Jira/GitHub later if you want.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Web projects (Node/npm)</b> — a new `Web · Node/npm` build stack: `npm run build/test/lint` verification, diff-coverage from lcov, and UI proof captured with **Playwright** screenshots — the same Figma fidelity judge and quality scorecard the mobile stacks get.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Jira is now an adapter, not a requirement</b> — the whole pipeline (sync, status transitions, context packs, attachments, filing review findings) runs through a tracker interface, so Jira, GitHub Issues, and local-only projects all behave consistently. Also fixes multi-project installs where opening a PR transitioned Jira with the wrong credentials.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Doctor gains a **Web build &amp; test** section; project setup lets you pick Jira / GitHub / None per project.</span></li>
+            </ul>
+          </div>
+        </article>
+
+<article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.7.3 — Edit projects &amp; fixed setup dialog</span>
             <span class="rel-date">Jul 3, 2026</span>
           </div>
           <div class="rel-card">
@@ -498,6 +515,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=18"></script>
+<script src="app.js?v=19"></script>
 </body>
 </html>
