@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=17" />
+  <link rel="stylesheet" href="styles.css?v=18" />
 </head>
 <body>
 
@@ -80,8 +80,24 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.7.2 — Honest agent errors, custom gateways &amp; debug bundle</span>
+            <span class="rel-ver">v0.7.3 — Edit projects &amp; fixed setup dialog</span>
             <span class="rel-tag">Latest</span>
+            <span class="rel-date">Jul 3, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>Edit project.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Edit project</b> — a pencil button in the project switcher (and the &quot;Jira not configured — set up&quot; link in the header) opens the project for editing: name, Jira credentials, repo, base branch and verify config. No more re-creating a project just to add Jira.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Saved token stays safe</b> — leaving the API-token field blank keeps the stored token; &quot;Test connection&quot; works against the saved token too.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Setup dialog fixed</b> — the Add/Edit project dialog no longer renders clipped under the glass header; it is properly centered on every page.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Delete any project</b> — the last remaining project can now be removed too; AgentHub returns to first-run setup.</span></li>
+            </ul>
+          </div>
+        </article>
+
+<article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.7.2 — Honest agent errors, custom gateways &amp; debug bundle</span>
             <span class="rel-date">Jul 3, 2026</span>
           </div>
           <div class="rel-card">
@@ -482,6 +498,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=17"></script>
+<script src="app.js?v=18"></script>
 </body>
 </html>
