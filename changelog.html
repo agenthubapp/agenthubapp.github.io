@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=19" />
+  <link rel="stylesheet" href="styles.css?v=20" />
 </head>
 <body>
 
@@ -51,7 +51,7 @@
     </nav>
     <div class="nav-right">
       <a class="btn btn-ghost" href="index.html#start">Get started</a>
-      <a class="btn btn-primary js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.8.0/AgentHub-0.8.0-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-primary js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.8.1/AgentHub-0.8.1-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <svg width="22" height="22"><use id="navToggleIcon" href="#i-menu"/></svg>
       </button>
@@ -80,8 +80,26 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.8.0 — beyond Jira, beyond mobile</span>
+            <span class="rel-ver">v0.8.1 — Verify on device, native mobile upgrade &amp; hardened relay</span>
             <span class="rel-tag">Latest</span>
+            <span class="rel-date">Jul 4, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>Verify on device.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Verify on device</b> — one tap installs the ticket's build on the simulator, replays its recorded flow to the exact screen, and streams a live view alongside the ticket's acceptance checklist.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Native mobile app leveled up</b> — new More tab with Autopilot control, Settings and a real terminal; ticket verify view with live simulator snapshots; Live Activities + Dynamic Island for active runs; smarter Lock Screen widgets.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Relay security hardening</b> — device pairing now runs fully end-to-end encrypted through the relay, plus registration tokens, rate limits and abuse protection for public relays.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Mobile web polish</b> — the iOS keyboard no longer covers the chat/terminal input, bigger touch targets everywhere, PWA icon and theme fixes.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Cloudflare Tunnel option</b> — free self-hosted remote access with a step-by-step guide (shown in Settings only once configured).</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Housekeeping</b> — locally created tickets can now be deleted with full cleanup.</span></li>
+            </ul>
+          </div>
+        </article>
+
+<article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.8.0 — beyond Jira, beyond mobile</span>
             <span class="rel-date">Jul 3, 2026</span>
           </div>
           <div class="rel-card">
@@ -515,6 +533,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=19"></script>
+<script src="app.js?v=20"></script>
 </body>
 </html>
