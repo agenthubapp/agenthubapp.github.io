@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20" />
+  <link rel="stylesheet" href="styles.css?v=21" />
 </head>
 <body>
 
@@ -51,7 +51,7 @@
     </nav>
     <div class="nav-right">
       <a class="btn btn-ghost" href="index.html#start">Get started</a>
-      <a class="btn btn-primary js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.8.1/AgentHub-0.8.1-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-primary js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.8.2/AgentHub-0.8.2-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <svg width="22" height="22"><use id="navToggleIcon" href="#i-menu"/></svg>
       </button>
@@ -80,8 +80,22 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.8.1 — Verify on device, native mobile upgrade &amp; hardened relay</span>
+            <span class="rel-ver">v0.8.2 — Verify tab fixes</span>
             <span class="rel-tag">Latest</span>
+            <span class="rel-date">Jul 4, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>Verify on device now reachable for every ticket.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Verify on device now reachable for every ticket</b> — the simulator review tab was only appearing for UI tickets with screenshots; it now shows on any ticket that has run work, including backend tickets in Ready for Review.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Commit-message suggestions</b> — more reliable, and when the AI model can't be reached it now tells you the real reason instead of a generic 'could not parse' message.</span></li>
+            </ul>
+          </div>
+        </article>
+
+<article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.8.1 — Verify on device, native mobile upgrade &amp; hardened relay</span>
             <span class="rel-date">Jul 4, 2026</span>
           </div>
           <div class="rel-card">
@@ -533,6 +547,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=20"></script>
+<script src="app.js?v=21"></script>
 </body>
 </html>
