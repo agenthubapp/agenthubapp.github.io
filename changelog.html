@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=16" />
+  <link rel="stylesheet" href="styles.css?v=17" />
 </head>
 <body>
 
@@ -80,8 +80,25 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.7.1 — Ask 2.0 + platform hardening</span>
+            <span class="rel-ver">v0.7.2 — Honest agent errors, custom gateways &amp; debug bundle</span>
             <span class="rel-tag">Latest</span>
+            <span class="rel-date">Jul 3, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>No more garbage answers in chat.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>No more garbage answers in chat</b> — when an agent CLI fails (out of credit, expired login, stray terminal codes), Ask now fails over to the next agent and reports the real cause with a fix hint, instead of posting the raw error as a reply.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Actionable auth &amp; billing errors</b> — &quot;Login canceled&quot;, &quot;Credit balance is too low&quot; and similar failures now pause runs with the exact next step (re-login command or where to fix the key), in both the run panel and chat.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Custom gateway support for Codex</b> — Codex routed through a LiteLLM / corporate gateway (`model_provider` in `~/.codex/config.toml`) now works end-to-end: paste the gateway token in Settings → AI Connection; AgentHub no longer wrongly rejects it against OpenAI.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Debug bundle</b> — Settings → System check → **Debug bundle** downloads a diagnostics file (doctor state, agent auth, codex routing, recent failed-run logs — secrets redacted) you can attach to any bug report.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Desktop env overrides</b> — the desktop app now creates `~/Library/Application Support/AgentHub/env` for advanced knobs, and every hint that used to say &quot;.env.local&quot; now points to the right file for your install.</span></li>
+            </ul>
+          </div>
+        </article>
+
+<article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.7.1 — Ask 2.0 + platform hardening</span>
             <span class="rel-date">Jul 3, 2026</span>
           </div>
           <div class="rel-card">
@@ -465,6 +482,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=16"></script>
+<script src="app.js?v=17"></script>
 </body>
 </html>
