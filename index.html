@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AgentHub — Local-first mission control for AI coding agents</title>
-  <meta name="description" content="AgentHub turns Jira tickets into reviewed pull requests. Mission Control workspace, live agent cockpit, deep QA gate, and Draft PRs — local-first on your Mac. Codex, Devin, or Cursor CLI." />
+  <meta name="description" content="AgentHub turns Jira tickets into reviewed pull requests. Mission Control workspace, live agent cockpit, deep QA gate, and Draft PRs — local-first on your Mac, with a native iOS app to watch and steer runs from anywhere. Codex, Devin, or Cursor CLI." />
   <meta name="theme-color" content="#0a0b10" />
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -13,7 +13,7 @@
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="AgentHub — Mission control for AI coding agents" />
-  <meta property="og:description" content="Mission Control for Jira + AI agents — live cockpit, deep QA gate, Draft PRs. Local-first on your Mac." />
+  <meta property="og:description" content="Mission Control for Jira + AI agents — live cockpit, deep QA gate, Draft PRs. Local-first on your Mac, with a native iOS companion app." />
   <meta property="og:image" content="assets/og.svg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="AgentHub — Mission control for AI coding agents" />
@@ -81,6 +81,7 @@
       <a href="#how">How it works</a>
       <a href="#features">Features</a>
       <a href="#quality">Quality</a>
+      <a href="#mobile">iOS app</a>
       <a href="#autopilot">Autopilot</a>
       <a href="#security">Local-first</a>
       <a href="changelog.html">Changelog</a>
@@ -97,6 +98,7 @@
     <a href="#how">How it works</a>
     <a href="#features">Features</a>
     <a href="#quality">Quality</a>
+    <a href="#mobile">iOS app</a>
     <a href="#autopilot">Autopilot</a>
     <a href="#security">Local-first</a>
     <a href="changelog.html">Changelog</a>
@@ -119,7 +121,7 @@
         <p class="hero-sub">
           AgentHub is a local-first mission control that puts <b>your AI coding agent</b> — whatever CLI
           you run, like Codex or Devin — to work on every ticket: context, code, tests, a deep QA gate,
-          and a Draft PR. All on your Mac. Zero infra.
+          and a Draft PR. All on your Mac. Zero infra — and a <b>native iOS app</b> to watch and steer it from anywhere.
         </p>
         <div class="hero-cta">
           <a class="btn btn-primary btn-lg js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.8.4/AgentHub-0.8.4-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -407,8 +409,8 @@
 
         <article class="feature-card reveal">
           <div class="feature-icon"><svg aria-hidden="true"><use href="#i-phone"/></svg></div>
-          <h3>Mobile + PiP</h3>
-          <p>Phone access over Tailscale — approve plans from push, watch runs, even a repo terminal. Pop out a floating PiP panel on desktop for always-on monitoring.</p>
+          <h3>Native iOS app + PiP</h3>
+          <p>Pair by scanning a QR — no VPN. Live Activities and a home-screen widget track runs; approve plans from push; drive the board, Ask and a repo terminal from your phone. Plus a floating PiP panel on desktop.</p>
         </article>
 
         <article class="feature-card reveal">
@@ -557,6 +559,79 @@
               <div class="fid-verdict">
                 <span class="fid-score">92</span>
                 <span class="txt">High fidelity · 2 minor deviations (corner radius, caption color)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ iOS companion ============ -->
+  <style>
+    .mob-visual { display:flex; justify-content:center; }
+    .phone {
+      width: 256px; border-radius: 44px; padding: 11px;
+      background: linear-gradient(160deg,#20222f,#0b0c14);
+      border: 1px solid var(--border-2);
+      box-shadow: var(--shadow), 0 0 72px -22px rgba(124,111,240,.6);
+    }
+    .phone-screen {
+      position: relative; border-radius: 34px; overflow: hidden; aspect-ratio: 9 / 19.3;
+      background:
+        radial-gradient(120% 55% at 50% 6%, rgba(124,111,240,.16), transparent 55%),
+        linear-gradient(180deg,#12141f,#080a11);
+      padding: 12px 13px 18px; display: flex; flex-direction: column;
+    }
+    .phone-island { width: 96px; height: 27px; background:#000; border-radius:20px; margin: 3px auto 0; }
+    .phone-clock { text-align:center; }
+    .phone-clock span { font-size:12px; color:rgba(255,255,255,.5); }
+    .phone-clock b { display:block; font-size:44px; font-weight:600; letter-spacing:-1.5px; line-height:1; margin-top:12px; color:#eef0fb; }
+    .la {
+      margin-top:auto; background: rgba(18,20,31,.9); border:1px solid var(--border);
+      border-radius:20px; padding:12px 13px; display:flex; flex-direction:column; gap:9px;
+      -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+    }
+    .la-top { display:flex; align-items:center; gap:10px; }
+    .la-badge { width:34px;height:34px;flex:0 0 auto;border-radius:10px; background:linear-gradient(145deg,#8b7ff2,#6355e0); display:grid;place-items:center; }
+    .la-badge svg { width:16px;height:16px;color:#fff; }
+    .la-id { min-width:0; flex:1; }
+    .la-key { font-family:var(--font-mono); font-weight:600; font-size:14px; color:#fff; line-height:1.15; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .la-sum { font-size:11.5px; color:rgba(255,255,255,.45); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .la-pill { font-size:9px; font-weight:700; letter-spacing:.5px; text-transform:uppercase; color:#b3a9ff; background:rgba(124,111,240,.18); padding:3px 8px; border-radius:999px; flex:0 0 auto; }
+    .la-status { font-size:12px; color:rgba(255,255,255,.78); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .la-prog { display:flex; align-items:center; gap:10px; }
+    .la-bar { flex:1; height:5px; border-radius:999px; background:rgba(255,255,255,.1); overflow:hidden; }
+    .la-bar i { display:block; height:100%; width:64%; border-radius:999px; background:linear-gradient(90deg,rgba(139,127,242,.75),#8b7ff2); }
+    .la-pct { font-family:var(--font-mono); font-size:11px; font-weight:600; color:#b3a9ff; }
+  </style>
+  <section class="section-pad" id="mobile" style="padding-top:0">
+    <div class="container">
+      <div class="deep">
+        <div class="deep-text reveal">
+          <span class="eyebrow"><span class="dot"></span> iOS companion</span>
+          <h3>Your board — and your builds — in your pocket.</h3>
+          <p class="lede">The AgentHub iOS app pairs with your Mac in one scan — no VPN, no port-forwarding. Watch runs live on the Lock Screen, approve a plan straight from a push, and drive the whole board, Ask and a repo terminal from anywhere.</p>
+          <ul class="checks">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Scan-to-pair</b> over an encrypted relay — or self-host the tunnel. No Tailscale required.</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Live Activities &amp; Dynamic Island</b> — a run's phase, status and progress on your Lock Screen.</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>A home-screen widget</b> and push notifications with a one-tap <span class="kbd">Approve</span>.</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Today, Board, Inbox, Ask</b> and a full repo terminal — the desktop app, on iOS.</span></li>
+          </ul>
+        </div>
+        <div class="deep-visual reveal mob-visual">
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="phone-island"></div>
+              <div class="phone-clock"><span>Sat, Jul 4</span><b>12:50</b></div>
+              <div class="la">
+                <div class="la-top">
+                  <div class="la-badge"><svg aria-hidden="true"><use href="#i-terminal"/></svg></div>
+                  <div class="la-id"><div class="la-key">AH-942</div><div class="la-sum">Add pull-to-refresh on Feed</div></div>
+                  <span class="la-pill">Executing</span>
+                </div>
+                <div class="la-status">Editing FeedView.swift</div>
+                <div class="la-prog"><div class="la-bar"><i></i></div><span class="la-pct">64%</span></div>
               </div>
             </div>
           </div>
@@ -720,9 +795,9 @@
         <div class="foot-col">
           <h5>Resources</h5>
           <a href="#start">Get started</a>
+          <a href="#mobile">iOS app</a>
           <a href="changelog.html">Changelog</a>
           <a href="#security">Local-first &amp; security</a>
-          <a href="#features">Knowledge &amp; RAG</a>
         </div>
         <div class="foot-col">
           <h5>Built with</h5>
