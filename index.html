@@ -571,39 +571,45 @@
   <style>
     .mob-visual { display:flex; justify-content:center; }
     .phone {
-      width: 256px; border-radius: 44px; padding: 11px;
+      width: 262px; border-radius: 46px; padding: 11px;
       background: linear-gradient(160deg,#20222f,#0b0c14);
       border: 1px solid var(--border-2);
-      box-shadow: var(--shadow), 0 0 72px -22px rgba(124,111,240,.6);
+      box-shadow: var(--shadow), 0 0 78px -22px rgba(124,111,240,.6);
     }
     .phone-screen {
-      position: relative; border-radius: 34px; overflow: hidden; aspect-ratio: 9 / 19.3;
-      background:
-        radial-gradient(120% 55% at 50% 6%, rgba(124,111,240,.16), transparent 55%),
-        linear-gradient(180deg,#12141f,#080a11);
-      padding: 12px 13px 18px; display: flex; flex-direction: column;
+      position: relative; border-radius: 36px; overflow: hidden; aspect-ratio: 9 / 19.3;
+      background: linear-gradient(180deg,#0e1018,#080a11);
+      display: flex; flex-direction: column;
     }
-    .phone-island { width: 96px; height: 27px; background:#000; border-radius:20px; margin: 3px auto 0; }
-    .phone-clock { text-align:center; }
-    .phone-clock span { font-size:12px; color:rgba(255,255,255,.5); }
-    .phone-clock b { display:block; font-size:44px; font-weight:600; letter-spacing:-1.5px; line-height:1; margin-top:12px; color:#eef0fb; }
-    .la {
-      margin-top:auto; background: rgba(18,20,31,.9); border:1px solid var(--border);
-      border-radius:20px; padding:12px 13px; display:flex; flex-direction:column; gap:9px;
-      -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
-    }
-    .la-top { display:flex; align-items:center; gap:10px; }
-    .la-badge { width:34px;height:34px;flex:0 0 auto;border-radius:10px; background:linear-gradient(145deg,#8b7ff2,#6355e0); display:grid;place-items:center; }
-    .la-badge svg { width:16px;height:16px;color:#fff; }
-    .la-id { min-width:0; flex:1; }
-    .la-key { font-family:var(--font-mono); font-weight:600; font-size:14px; color:#fff; line-height:1.15; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-    .la-sum { font-size:11.5px; color:rgba(255,255,255,.45); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-    .la-pill { font-size:9px; font-weight:700; letter-spacing:.5px; text-transform:uppercase; color:#b3a9ff; background:rgba(124,111,240,.18); padding:3px 8px; border-radius:999px; flex:0 0 auto; }
-    .la-status { font-size:12px; color:rgba(255,255,255,.78); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-    .la-prog { display:flex; align-items:center; gap:10px; }
-    .la-bar { flex:1; height:5px; border-radius:999px; background:rgba(255,255,255,.1); overflow:hidden; }
-    .la-bar i { display:block; height:100%; width:64%; border-radius:999px; background:linear-gradient(90deg,rgba(139,127,242,.75),#8b7ff2); }
-    .la-pct { font-family:var(--font-mono); font-size:11px; font-weight:600; color:#b3a9ff; }
+    .phone-island { position:absolute; top:9px; left:50%; transform:translateX(-50%); width:92px; height:25px; background:#000; border-radius:20px; z-index:3; }
+    /* app header */
+    .mini-hdr { display:flex; align-items:center; gap:9px; padding:44px 16px 12px; }
+    .mini-brand { width:26px;height:26px;flex:0 0 auto;border-radius:8px; background:linear-gradient(145deg,#8b7ff2,#6355e0); display:grid;place-items:center; box-shadow:0 4px 12px rgba(99,85,224,.4); }
+    .mini-brand svg { width:15px;height:15px;color:#fff; }
+    .mini-title { font-size:19px; font-weight:700; color:#f4f5f7; letter-spacing:-.3px; }
+    .mini-live { margin-left:auto; display:inline-flex; align-items:center; gap:5px; font-size:10px; color:#5fd598; }
+    .mini-live i { width:6px;height:6px;border-radius:50%;background:#34d399; box-shadow:0 0 8px #34d399; }
+    /* run cards */
+    .mini-body { flex:1; padding:2px 13px; display:flex; flex-direction:column; gap:9px; overflow:hidden; }
+    .mini-col { font-size:10px; font-weight:700; letter-spacing:.5px; text-transform:uppercase; color:var(--muted-2); padding:4px 3px 0; }
+    .mini-card { background:rgba(255,255,255,.03); border:1px solid var(--border); border-radius:14px; padding:11px 12px; display:flex; flex-direction:column; gap:7px; }
+    .mini-top { display:flex; align-items:center; gap:8px; }
+    .mini-key { font-family:var(--font-mono); font-size:11px; font-weight:600; color:#b3a9ff; }
+    .mini-pill { margin-left:auto; font-size:8.5px; font-weight:700; letter-spacing:.4px; text-transform:uppercase; padding:2.5px 7px; border-radius:999px; flex:0 0 auto; }
+    .mini-pill.run { color:#b3a9ff; background:rgba(124,111,240,.18); }
+    .mini-pill.wait { color:#c9a4ff; background:rgba(139,92,246,.16); }
+    .mini-pill.ok { color:#5fd598; background:rgba(52,211,153,.15); }
+    .mini-ttl { font-size:12.5px; color:#e7e9f2; line-height:1.3; }
+    .mini-prog { display:flex; align-items:center; gap:9px; }
+    .mini-bar { flex:1; height:4px; border-radius:999px; background:rgba(255,255,255,.09); overflow:hidden; }
+    .mini-bar i { display:block; height:100%; width:64%; border-radius:999px; background:linear-gradient(90deg,rgba(139,127,242,.7),#8b7ff2); }
+    .mini-pct { font-family:var(--font-mono); font-size:10px; font-weight:600; color:#b3a9ff; }
+    /* tab bar */
+    .mini-tabs { display:flex; padding:9px 8px calc(9px + 6px); border-top:1px solid var(--border); background:rgba(10,11,16,.7); }
+    .mini-tab { flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; color:var(--muted-2); }
+    .mini-tab svg { width:18px;height:18px; }
+    .mini-tab span { font-size:8.5px; font-weight:500; }
+    .mini-tab.on { color:#8b7ff2; }
   </style>
   <section class="section-pad" id="mobile" style="padding-top:0">
     <div class="container">
@@ -623,15 +629,34 @@
           <div class="phone">
             <div class="phone-screen">
               <div class="phone-island"></div>
-              <div class="phone-clock"><span>Sat, Jul 4</span><b>12:50</b></div>
-              <div class="la">
-                <div class="la-top">
-                  <div class="la-badge"><svg aria-hidden="true"><use href="#i-terminal"/></svg></div>
-                  <div class="la-id"><div class="la-key">AH-942</div><div class="la-sum">Add pull-to-refresh on Feed</div></div>
-                  <span class="la-pill">Executing</span>
+              <div class="mini-hdr">
+                <span class="mini-brand"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"/><path d="m7 16.5-4.74-2.85"/><path d="m7 16.5 5-3"/><path d="M7 16.5v5.17"/><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"/><path d="m17 16.5-5-3"/><path d="m17 16.5 4.74-2.85"/><path d="M17 16.5v5.17"/><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z"/><path d="M12 8 7.26 5.15"/><path d="m12 8 4.74-2.85"/><path d="M12 13.5V8"/></svg></span>
+                <span class="mini-title">Board</span>
+                <span class="mini-live"><i></i> live</span>
+              </div>
+              <div class="mini-body">
+                <div class="mini-col">Agent running · 1</div>
+                <div class="mini-card">
+                  <div class="mini-top"><span class="mini-key">AH-942</span><span class="mini-pill run">Executing</span></div>
+                  <div class="mini-ttl">Add pull-to-refresh on Feed</div>
+                  <div class="mini-prog"><div class="mini-bar"><i></i></div><span class="mini-pct">64%</span></div>
                 </div>
-                <div class="la-status">Editing FeedView.swift</div>
-                <div class="la-prog"><div class="la-bar"><i></i></div><span class="la-pct">64%</span></div>
+                <div class="mini-col" style="margin-top:2px">In progress · 2</div>
+                <div class="mini-card">
+                  <div class="mini-top"><span class="mini-key">AH-871</span><span class="mini-pill wait">Awaiting plan</span></div>
+                  <div class="mini-ttl">Refresh token before expiry</div>
+                </div>
+                <div class="mini-card">
+                  <div class="mini-top"><span class="mini-key">AH-888</span><span class="mini-pill ok">PR ready</span></div>
+                  <div class="mini-ttl">Fix avatar crop on iPad</div>
+                </div>
+              </div>
+              <div class="mini-tabs">
+                <span class="mini-tab"><svg aria-hidden="true"><use href="#i-spark"/></svg><span>Today</span></span>
+                <span class="mini-tab on"><svg aria-hidden="true"><use href="#i-kanban"/></svg><span>Board</span></span>
+                <span class="mini-tab"><svg aria-hidden="true"><use href="#i-clipboard"/></svg><span>Inbox</span></span>
+                <span class="mini-tab"><svg aria-hidden="true"><use href="#i-chat"/></svg><span>Ask</span></span>
+                <span class="mini-tab"><svg aria-hidden="true"><use href="#i-layers"/></svg><span>More</span></span>
               </div>
             </div>
           </div>
