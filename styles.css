@@ -142,7 +142,7 @@ section { position: relative; }
 .brand .mark { width: 30px; height: 30px; border-radius: 9px; }
 .nav-links { display: flex; align-items: center; gap: 4px; margin-left: 14px; }
 .nav-links a {
-  color: var(--muted); font-size: 14.5px; font-weight: 500;
+  color: var(--muted); font-size: 14.5px; font-weight: 500; white-space: nowrap; flex-shrink: 0;
   padding: 8px 12px; border-radius: 9px; transition: color 0.15s ease, background 0.15s ease;
 }
 .nav-links a:hover { color: var(--fg); background: rgba(255, 255, 255, 0.05); }
