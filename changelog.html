@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=26" />
+  <link rel="stylesheet" href="styles.css?v=27" />
 </head>
 <body>
 
@@ -51,7 +51,7 @@
     </nav>
     <div class="nav-right">
       <a class="btn btn-ghost" href="index.html#start">Get started</a>
-      <a class="btn btn-primary js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.8.6/AgentHub-0.8.6-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-primary js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.9.0/AgentHub-0.9.0-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <svg width="22" height="22"><use id="navToggleIcon" href="#i-menu"/></svg>
       </button>
@@ -80,8 +80,23 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.8.6 — Design in Figma + smarter free models</span>
+            <span class="rel-ver">v0.9.0 — Understand before you ship</span>
             <span class="rel-tag">Latest</span>
+            <span class="rel-date">Jul 6, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>Review quiz-gate.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Review quiz-gate</b> — before you Commit or open a PR, AgentHub can ask you 2–3 questions generated from the actual change, so you never merge code you haven't read (especially handy when approving from your phone). Opt in with AGENTHUB_QUIZ_GATE=1.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Impl-notes</b> — the agent now logs every time reality diverges from the approved plan; the divergences show in the run panel and feed the reviewer, so justified scope changes aren't flagged as problems. Opt in with AGENTHUB_IMPL_NOTES=1.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Works on any project</b> — removed the last app-specific hardcoding; AgentHub resolves your Xcode scheme/workspace from your project's Build stack settings or auto-detects it from the worktree.</span></li>
+            </ul>
+          </div>
+        </article>
+
+<article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.8.6 — Design in Figma + smarter free models</span>
             <span class="rel-date">Jul 5, 2026</span>
           </div>
           <div class="rel-card">
@@ -605,6 +620,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=25"></script>
+<script src="app.js?v=27"></script>
 </body>
 </html>
