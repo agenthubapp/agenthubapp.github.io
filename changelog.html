@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=29" />
+  <link rel="stylesheet" href="styles.css?v=30" />
 </head>
 <body>
 
@@ -51,7 +51,7 @@
     </nav>
     <div class="nav-right">
       <a class="btn btn-ghost" href="index.html#start">Get started</a>
-      <a class="btn btn-primary js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.10.0/AgentHub-0.10.0-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-primary js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.10.1/AgentHub-0.10.1-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <svg width="22" height="22"><use id="navToggleIcon" href="#i-menu"/></svg>
       </button>
@@ -80,8 +80,36 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.10.0 — Nova becomes a teammate + a measurable context brain</span>
+            <span class="rel-ver">v0.10.1 — Ask levels up, Inspect &amp; Design close their loops</span>
             <span class="rel-tag">Latest</span>
+            <span class="rel-date">Jul 11, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>True multi-turn agent sessions.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>True multi-turn agent sessions</b> — follow-up messages in Agent mode resume the same CLI session (Claude Code, Codex, Cursor), so the agent remembers what it read and changed; falls back to a fresh session automatically if a session expired.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Tool-step timeline</b> — a collapsible &quot;🛠 12 steps · 3 edits · 1m 40s&quot; timeline replaces the single activity line, streamed live and preserved in the transcript.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Per-file &amp; per-hunk revert</b> — every file block and every hunk in an agent diff gets its own revert control (validated with git apply --check so a stale diff can't corrupt the tree), plus &quot;Restore to before this reply&quot; via automatic pre-turn checkpoints.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Composer</b> — slash commands (/review, /fix, /test, /clear) and a Stop button that keeps the partial answer.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Android live capture</b> — the cockpit now screenshots a connected device/emulator on Android projects (adb), with platform-correct guidance; per-project Figma tokens are respected everywhere.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Re-inspect after rework</b> — pins you flagged last time carry into the next review session (marked &quot;from last review&quot;, one-tap Resolved); unresolved ones are prioritized in the rework feedback.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>&quot;Inspected ✓&quot; board chip</b> — see at a glance which review-ready tickets already passed manual inspection (a newer run invalidates it).</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Faster queue loading (no longer loads every ticket's screenshots just to filter).</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>No more silent hangs</b> — the page shows live &quot;Plugin connected / not detected&quot; status and refuses to start a run into an empty Figma channel with an actionable message; a Stop button cancels a running draw.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Iterate on a design</b> — &quot;Continue&quot; modifies the frames you already drew instead of starting over; history entries show a rendered preview and an &quot;Open in Figma&quot; link.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Attach to ticket</b> — a drawn design becomes the build-to-spec reference for that ticket's next agent run (and survives tracker syncs).</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Relay hardening: port-conflict retry, health heartbeat, a new doctor check, and stale &quot;running&quot; sessions are swept.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Board no longer flashes the list view for board-preference users; switching projects can't leave a blank detail pane.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Nova now follows up on batch dispatches too, and picks the dispatch agent by recent track record while holding back tickets that would collide with in-flight work.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Android runs get scoped tests on the fast lane and a flake-retry (a test that passes on re-run no longer fails the gate).</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Vietnamese UI now covers server-generated texts (needs-input asks, triage reasons, inbox details).</span></li>
+            </ul>
+          </div>
+        </article>
+
+<article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.10.0 — Nova becomes a teammate + a measurable context brain</span>
             <span class="rel-date">Jul 11, 2026</span>
           </div>
           <div class="rel-card">
@@ -666,6 +694,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=29"></script>
+<script src="app.js?v=30"></script>
 </body>
 </html>
