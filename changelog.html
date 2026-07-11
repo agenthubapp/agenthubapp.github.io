@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=31" />
+  <link rel="stylesheet" href="styles.css?v=32" />
 </head>
 <body>
 
@@ -51,7 +51,7 @@
     </nav>
     <div class="nav-right">
       <a class="btn btn-ghost" href="index.html#start">Get started</a>
-      <a class="btn btn-primary js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.10.1/AgentHub-0.10.1-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-primary js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.10.2/AgentHub-0.10.2-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <svg width="22" height="22"><use id="navToggleIcon" href="#i-menu"/></svg>
       </button>
@@ -80,8 +80,30 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.10.1 — Ask levels up, Inspect &amp; Design close their loops</span>
+            <span class="rel-ver">v0.10.2 — Platform polish: sharper Inbox, smarter Dashboard, resilient Terminal</span>
             <span class="rel-tag">Latest</span>
+            <span class="rel-date">Jul 12, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>Stopping a batch now really stops it.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Stopping a batch now really stops it</b> — items paused on a question or a failure are cancelled too, instead of haunting the Needs Input column forever.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The Inbox stays honest</b> — a superseded run's question disappears once a newer run takes over, batches that need attention (or hit their token budget) now appear as inbox items, and pending visual-snapshot reviews do too. Inbox polling is also dramatically lighter.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Nova-created batches are labeled</b> — a Nova badge shows which batches she queued.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Date-range toggle</b> — (30d / 90d / all) and a corrected PR count (manual PRs counted, rework runs no longer double-counted).</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>**New cards**: an Agents scorecard (the same track record Nova uses to pick executors), a retrieval-quality sparkline from the built-in eval history, and agent-discipline stats (plan deviations, lessons learned).</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Today's briefing now mentions what Nova dispatched and finished.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The terminal survives network blips</b> — it reconnects to the same shell with your scrollback intact (great on the phone over Tailscale).</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Maestro regression suite</b> — skips gracefully when no simulator/device is booted instead of reporting false regressions, and failing flows now explain themselves in the gate message.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Design relay port</b> — can be changed from Settings and applies within a minute — no worker restart.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>agenthubapp.github.io got a full redesign: a live animated run in the hero, an interactive product tour, and a Nova spotlight.</span></li>
+            </ul>
+          </div>
+        </article>
+
+<article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.10.1 — Ask levels up, Inspect &amp; Design close their loops</span>
             <span class="rel-date">Jul 11, 2026</span>
           </div>
           <div class="rel-card">
@@ -694,6 +716,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=31"></script>
+<script src="app.js?v=32"></script>
 </body>
 </html>
