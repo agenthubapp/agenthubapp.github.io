@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=28" />
+  <link rel="stylesheet" href="styles.css?v=29" />
 </head>
 <body>
 
@@ -51,7 +51,7 @@
     </nav>
     <div class="nav-right">
       <a class="btn btn-ghost" href="index.html#start">Get started</a>
-      <a class="btn btn-primary js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.9.1/AgentHub-0.9.1-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-primary js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.10.0/AgentHub-0.10.0-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <svg width="22" height="22"><use id="navToggleIcon" href="#i-menu"/></svg>
       </button>
@@ -80,8 +80,37 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.9.1 — Fixes &amp; agent status in the terminal</span>
+            <span class="rel-ver">v0.10.0 — Nova becomes a teammate + a measurable context brain</span>
             <span class="rel-tag">Latest</span>
+            <span class="rel-date">Jul 11, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>One-tap dispatch.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>One-tap dispatch</b> — Nova spots high-priority, agent-ready tickets and offers to assign them; one tap (in-app or on the notification's action button) starts fully-gated auto runs. Never merges anything by itself.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Speaks up when the app is closed</b> — worker-side push engine with quiet hours (default 22–8), a strict never-repeat rule per suggestion, and escalating back-off when you tap &quot;Not now&quot; (24h → 3d → 7d).</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Morning standup &amp; weekly report</b> — a daily &quot;what needs you + what's ready&quot; push (rephrased by your local LLM in Nova's voice, with a hard fact-preserving guard) and a Monday ROI summary (runs done, PRs merged, clean-merge rate, tokens).</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Sentinel</b> — warns about PRs open ≥48h, runs silent ≥30m, newly-muted baseline tests (with a one-tap &quot;Fix it&quot; that dispatches a repair run), and failing agents (open circuit breakers).</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Evidence-based orchestration</b> — the dispatch executor is chosen by recent track record (gate passes, clean merges, UI vs backend kind), risky tickets whose predicted files collide with in-flight worktrees/PRs are held back, and 2+ tickets dispatch as a conflict-aware Autopilot batch.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Audit thread</b> — everything Nova does lands in a persistent &quot;Nova&quot; conversation with live run cards, so the whole story is reviewable in one place.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Retrieval eval harness</b> — &quot;Evaluate retrieval&quot; on the Wiki page scores code search against real ground truth (the files each finished run actually changed): recall@5/@10, zero-recall tickets, config snapshot, and a recall trend recorded after every reindex.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Weight tuner</b> — &quot;Optimize weights&quot; sweeps the dense/lexical blend over that same ground truth and applies the best weight instantly (no reindex).</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Symbol-boost</b> — a ticket naming an exact declared type now always surfaces the declaring file.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Auto-wiki</b> — the local LLM writes concise per-module wiki pages from your code, refreshed incrementally as modules change; never touches human-written pages.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Structural context</b> — run context packs now include 1-hop import/type-reference neighbors of the top code hits (the callers/callees semantic search misses).</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Android verify parity</b> — per-test failures are now mined from gradle's JUnit XML, so the pre-existing-failure baseline finally works on Android (one known-bad test no longer blocks every auto run), and auto-fix feedback stops telling Android agents to write Swift tests.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Unconfigured build stack can no longer ship zero-QA PRs</b> — it blocks the gate and asks you to configure Settings → Build stack.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Doctor gains an Android section</b> — (SDK, adb, device/AVD, JDK).</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Per-project repo path everywhere</b> — codemap, worker terminal, merge-watch, Ask/chat pins and more no longer resolve the wrong project's repo in multi-project installs; a project without a repo now says so instead of silently using another project's.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Smarter agent-unavailable pauses</b> — a paused run now offers real &quot;Switch to X / Wait and retry&quot; actions instead of generic options; more agent question formats are recognized.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Missing figmaApiToken migration</b> — fresh installs and migrate-deploy upgrades no longer crash on project queries.</span></li>
+            </ul>
+          </div>
+        </article>
+
+<article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.9.1 — Fixes &amp; agent status in the terminal</span>
             <span class="rel-date">Jul 7, 2026</span>
           </div>
           <div class="rel-card">
@@ -637,6 +666,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=28"></script>
+<script src="app.js?v=29"></script>
 </body>
 </html>
