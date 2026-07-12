@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=34" />
+  <link rel="stylesheet" href="styles.css?v=35" />
 </head>
 <body>
 
@@ -51,7 +51,7 @@
     </nav>
     <div class="nav-right">
       <a class="btn btn-ghost" href="index.html#start">Get started</a>
-      <a class="btn btn-primary js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.10.4/AgentHub-0.10.4-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-primary js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.10.5/AgentHub-0.10.5-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <svg width="22" height="22"><use id="navToggleIcon" href="#i-menu"/></svg>
       </button>
@@ -80,8 +80,24 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.10.4 — the Cursor out-of-usage fallback actually fires now</span>
+            <span class="rel-ver">v0.10.5 — dogfood polish: cleaner plan review, honest badge, consistent language</span>
             <span class="rel-tag">Latest</span>
+            <span class="rel-date">Jul 12, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>Plan review you can actually read.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Plan review you can actually read</b> — when a run is waiting for plan approval, the ticket page now leads with the same clean &quot;Plan ready for review&quot; card the Inbox uses: the plan, Approve, and Request changes up top; run internals collapsed below.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The Inbox badge tells the truth</b> — acting on an item (approve, answer, dismiss — anywhere in the app) updates the nav count immediately instead of showing a stale number.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Back keeps your view</b> — returning from a ticket no longer forces list view; your board/list preference wins everywhere.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>English means English</b> — ~40 leftover Vietnamese strings in the UI chrome (including the whole plan-approve panel) now follow the language setting; notification action buttons follow it too.</span></li>
+            </ul>
+          </div>
+        </article>
+
+<article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.10.4 — the Cursor out-of-usage fallback actually fires now</span>
             <span class="rel-date">Jul 12, 2026</span>
           </div>
           <div class="rel-card">
@@ -744,6 +760,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=34"></script>
+<script src="app.js?v=35"></script>
 </body>
 </html>
