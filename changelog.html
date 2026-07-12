@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=32" />
+  <link rel="stylesheet" href="styles.css?v=33" />
 </head>
 <body>
 
@@ -51,7 +51,7 @@
     </nav>
     <div class="nav-right">
       <a class="btn btn-ghost" href="index.html#start">Get started</a>
-      <a class="btn btn-primary js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.10.2/AgentHub-0.10.2-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-primary js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.10.3/AgentHub-0.10.3-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <svg width="22" height="22"><use id="navToggleIcon" href="#i-menu"/></svg>
       </button>
@@ -80,8 +80,23 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.10.2 — Platform polish: sharper Inbox, smarter Dashboard, resilient Terminal</span>
+            <span class="rel-ver">v0.10.3 — Cursor works even when your plan is out of usage</span>
             <span class="rel-tag">Latest</span>
+            <span class="rel-date">Jul 12, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>Automatic fallback to Auto.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Automatic fallback to Auto</b> — when your Cursor plan hits its usage limit (only the Auto model keeps working), AgentHub now detects it and retries once on Auto instead of failing every phase. Once the fallback fires, the rest of the run stays on Auto.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Honest errors</b> — the limit error used to masquerade as &quot;Cursor could not produce a structured plan&quot; after burning four pointless retries, and Ask sessions died as a silent &quot;exited with code 1&quot;. Now the pause says exactly what happened (&quot;Your Cursor plan is out of usage — only the 'auto' model works. Pick 'auto' as the run model, or switch executor.&quot;) and stops retrying immediately.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Verified end-to-end against a replay of the real error stream from the field report.</span></li>
+            </ul>
+          </div>
+        </article>
+
+<article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.10.2 — Platform polish: sharper Inbox, smarter Dashboard, resilient Terminal</span>
             <span class="rel-date">Jul 12, 2026</span>
           </div>
           <div class="rel-card">
@@ -716,6 +731,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=32"></script>
+<script src="app.js?v=33"></script>
 </body>
 </html>
