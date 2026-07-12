@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=33" />
+  <link rel="stylesheet" href="styles.css?v=34" />
 </head>
 <body>
 
@@ -51,7 +51,7 @@
     </nav>
     <div class="nav-right">
       <a class="btn btn-ghost" href="index.html#start">Get started</a>
-      <a class="btn btn-primary js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.10.3/AgentHub-0.10.3-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-primary js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.10.4/AgentHub-0.10.4-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <svg width="22" height="22"><use id="navToggleIcon" href="#i-menu"/></svg>
       </button>
@@ -80,8 +80,21 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.10.3 — Cursor works even when your plan is out of usage</span>
+            <span class="rel-ver">v0.10.4 — the Cursor out-of-usage fallback actually fires now</span>
             <span class="rel-tag">Latest</span>
+            <span class="rel-date">Jul 12, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>v0.10.3's auto-model fallback could never trigger in production: cursor-agent reports the out-of-usage error on **stderr** (with a clean exit code), and that channel was logged but discarded before the error classifier could see it. Reproduced with a byte-exact replay of the field debug bundle, fixed, and re-verified end-to-end: an exhausted plan now recovers on Auto in a single retry, and if Auto is exhausted too the run pauses immediately with the real cause and a clear next step..</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>v0.10.3's auto-model fallback could never trigger in production: cursor-agent reports the out-of-usage error on **stderr** (with a clean exit code), and that channel was logged but discarded before the error classifier could see it. Reproduced with a byte-exact replay of the field debug bundle, fixed, and re-verified end-to-end: an exhausted plan now recovers on Auto in a single retry, and if Auto is exhausted too the run pauses immediately with the real cause and a clear next step.</span></li>
+            </ul>
+          </div>
+        </article>
+
+<article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.10.3 — Cursor works even when your plan is out of usage</span>
             <span class="rel-date">Jul 12, 2026</span>
           </div>
           <div class="rel-card">
@@ -731,6 +744,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=33"></script>
+<script src="app.js?v=34"></script>
 </body>
 </html>
