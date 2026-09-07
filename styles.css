@@ -83,7 +83,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
 .section-head { max-width: 640px; margin-bottom: 40px; }
 .section-head h2 { font-size: clamp(26px, 3.4vw, 38px); }
 .section-head p { margin-top: 12px; color: var(--t3); font-size: 16.5px; }
-.section-pad { padding-block: 88px; }
+.section-pad { padding-block: 88px; border-top: 1px solid var(--l1); }
 @media (max-width: 720px) { .section-pad { padding-block: 56px; } }
 
 /* ---------- ambient background ---------- */
@@ -231,6 +231,11 @@ footer { border-top: 1px solid var(--l1); padding-block: 52px 28px; margin-top: 
 @media (min-width: 900px) {
   .hero-grid { grid-template-columns: 1fr 1.15fr; align-items: center; }
   .feature { grid-template-columns: 1fr 1fr; gap: 56px; }
+  /* At this width the hero's screenshot sits in the same right-hand column as the next
+     section's screenshot, with no heading in that column to signal a new section — give
+     #free extra top space so its own screenshot never reads as a second one glued to the
+     hero's. (Narrower layouts stack text above image, so this isn't needed there.) */
+  #free { padding-top: 200px; }
 }
 @media (max-width: 860px) {
   .nav-links, .nav-right .btn-ghost { display: none; }
