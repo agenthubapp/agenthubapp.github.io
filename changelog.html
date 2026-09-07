@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Changelog — AgentHub</title>
-  <meta name="description" content="What's new in AgentHub — releases, features and fixes for the local-first mission control for AI coding agents." />
-  <meta name="theme-color" content="#0a0b10" />
+  <meta name="description" content="What's new in AgentHub — releases, features and fixes for the free, local-first coding agent." />
+  <meta name="theme-color" content="#f3f2f9" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0a0912" media="(prefers-color-scheme: dark)" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="assets/favicon.svg" />
   <meta property="og:type" content="website" />
@@ -15,8 +16,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=37" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=1" />
 </head>
 <body>
 
@@ -39,31 +40,29 @@
 <header class="nav" id="nav">
   <div class="container nav-inner">
     <a class="brand" href="index.html" aria-label="AgentHub home">
-      <img class="mark" src="assets/favicon.svg" alt="" width="30" height="30" />
-      AgentHub
+      <img class="mark" src="assets/favicon.svg" alt="" width="28" height="28" />
+      AgentHub <span class="ver">V4</span>
     </a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="index.html#how">How it works</a>
-      <a href="index.html#features">Features</a>
-      <a href="index.html#quality">Quality</a>
-      <a href="index.html#autopilot">Autopilot</a>
-      <a href="index.html#security">Local-first</a>
+      <a href="index.html#free">Free</a>
+      <a href="index.html#worktrees">Worktrees</a>
+      <a href="index.html#workflows">Workflows</a>
+      <a href="plan/index.html">Plan</a>
+      <a href="index.html#local">Local-first</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn-ghost" href="index.html#start">Get started</a>
-      <a class="btn btn-primary js-dl" href="https://github.com/agenthubapp/agenthubapp.github.io/releases/download/v0.11.0/AgentHub-0.11.0-arm64.dmg">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="index.html#download">Download for Mac</a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <svg width="22" height="22"><use id="navToggleIcon" href="#i-menu"/></svg>
       </button>
     </div>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html#how">How it works</a>
-    <a href="index.html#features">Features</a>
-    <a href="index.html#quality">Quality</a>
-    <a href="index.html#autopilot">Autopilot</a>
-    <a href="index.html#security">Local-first</a>
-    <a href="index.html#start">Get started</a>
+    <a href="index.html#free">Free</a>
+    <a href="index.html#worktrees">Worktrees</a>
+    <a href="index.html#workflows">Workflows</a>
+    <a href="plan/index.html">Plan</a>
+    <a href="index.html#local">Local-first</a>
   </div>
 </header>
 
@@ -80,8 +79,31 @@
 
         <article class="release reveal">
           <div class="rel-meta">
+            <span class="rel-ver">v1.0 — free lane, worktrees, Notes, Workflows, Skills, Plan</span>
+            <span class="rel-tag unreleased">Unreleased · building now</span>
+            <span class="rel-date">Sep 6–7, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>The whole app, rebuilt around a free lane that actually works.</h3>
+            <p style="color:var(--t3); font-size:14px; margin-bottom:14px">This is what's landed on <code>main</code> toward v1.0. Not released yet — no build has shipped
+              from this line, so treat every line below as in progress until the changelog says otherwise.</p>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Free lane, no key.</b> A keyless model pool routed by health, quality-first for coding by default, with automatic fallback when one stalls. Existing Claude Max, ChatGPT, Copilot and Gemini sign-ins now show up as lanes next to it.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Worktree per session.</b> Sessions isolate into their own git worktree and branch from main; the Changes / Diff / Terminal panel shows what moved, and Commit goes to main through a new merge queue instead of a bare push.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Notes.</b> A self-filling board: TODOs and FIXMEs, files under <code>.agenthub/tasks/</code>, open issues, failing tests and unfixed review findings each become a card, alongside anything typed by hand. Run turns a card into a session; Skip dismisses it until the source changes.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Workflows — Review, Build, Fix, Test, Release.</b> Five templates with automatic failover between lanes on a limit or gate failure, reported in one quiet line in the step's thread — never an error code, never a modal.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Skills.</b> Six bundled (UI/UX Pro Max, terse, diagnosing bugs, code review &amp; quality, writing plans, performance optimization), toggled per project in Settings › Skills, plus Add from GitHub for your own.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Custom agents.</b> Register any CLI — it gets a worktree, a permission mode and a sidebar colour like any built-in agent.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Plan gating v1.</b> Free vs AgentHub Plan ceilings (concurrency, history, workflow fan-out, failover, fast context), checked from an offline licence key — no account, no server call.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Performance &amp; polish.</b> An inline repo map and a warm worktree pool for a faster first token, per-turn tool grouping, motion v3, wide-window layout, markdown-lite replies, and a fixed notification icon.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="release reveal">
+          <div class="rel-meta">
             <span class="rel-ver">v0.11.0 — Agent radar &amp; a clearer workspace</span>
-            <span class="rel-tag">Latest</span>
+            <span class="rel-tag">Latest release</span>
             <span class="rel-date">Jul 18, 2026</span>
           </div>
           <div class="rel-card">
@@ -764,34 +786,33 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <a class="brand" href="index.html">
-          <img class="mark" src="assets/favicon.svg" alt="" width="30" height="30" />
+          <img class="mark" src="assets/favicon.svg" alt="" width="28" height="28" />
           AgentHub
         </a>
-        <p>Local-first mission control for Jira tickets and AI coding agents. Runs on your Mac, with zero infra.</p>
+        <p>Free coding agents on your Mac. No API key, worktree per session, a task board that finds the work, and skills you bring yourself.</p>
       </div>
       <div class="foot-cols">
         <div class="foot-col">
           <h5>Product</h5>
-          <a href="index.html#how">How it works</a>
-          <a href="index.html#features">Features</a>
-          <a href="index.html#quality">Quality engine</a>
-          <a href="index.html#autopilot">Autopilot</a>
+          <a href="index.html#free">Free models</a>
+          <a href="index.html#worktrees">Worktrees</a>
+          <a href="index.html#workflows">Workflows</a>
         </div>
         <div class="foot-col">
           <h5>Resources</h5>
-          <a href="index.html#start">Get started</a>
+          <a href="plan/index.html">Plan</a>
           <a href="changelog.html">Changelog</a>
-          <a href="index.html#security">Local-first &amp; security</a>
+          <a href="https://github.com/agenthubapp/agenthubapp.github.io/releases">Watch releases on GitHub</a>
         </div>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© <span id="year">2026</span> AgentHub · Local-first power tool</span>
-      <span class="foot-note"><span class="sdot"></span> Built for one developer who ships like a team</span>
+      <span>© <span id="year">2026</span> AgentHub</span>
+      <span class="foot-note"><span class="sdot"></span> Local-first · no telemetry</span>
     </div>
   </div>
 </footer>
 
-<script src="app.js?v=37"></script>
+<script src="app.js?v=1"></script>
 </body>
 </html>
