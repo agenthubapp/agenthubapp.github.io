@@ -1,22 +1,31 @@
 # AgentHub — marketing site
 
-The promo landing page for **AgentHub**, the local-first mission control for Jira tickets and
-AI coding agents. Pure static site — **no build step, no dependencies, no framework**. Just open it.
+The promo site for **AgentHub**: a free coding agent that runs on your Mac — no API key, a git
+worktree per session, a task board that finds work in your repo, five workflow templates with
+automatic failover, skills, and custom agents. Pure static site — **no build step, no dependencies,
+no framework**. Just open it.
 
 ## Files
 
 ```
-index.html      # the landing page (semantic sections + an inline SVG icon sprite)
+index.html      # the landing page (8 feature sections + hero, semantic + an inline SVG icon sprite)
 changelog.html  # the changelog page (shares styles.css + app.js)
-styles.css      # dark "Linear-style" theme — indigo→violet, hairline borders, responsive
-app.js          # sticky-nav state, mobile menu, scroll-reveal, copy-to-clipboard, footer year
+plan/index.html # Free vs Plan detail page (ceilings table, proposed price, FAQ)
+styles.css      # theme lifted from the app's own design/studio/app/globals.css tokens; light is the
+                # base palette, dark overrides under prefers-color-scheme — same two themes as the app
+app.js          # sticky-nav border, mobile menu, footer year — that's all of it
 assets/
   favicon.svg   # the AgentHub "boxes" glyph on the brand gradient
   og.svg        # 1200×630 Open Graph / social preview image
+  build53-*.png, tasks-*.png, picker-ratings-app-*.png, plan-spacing-app-*.png,
+  terminal-padding-after-*.png, turn-summary-app-*.png
+                # real screenshots of the installed app, reused as site imagery (each ≤300 KB)
+docs/           # Playwright proof screenshots + this session's report (not published, just proof)
 ```
 
-Fonts (Geist + Geist Mono) load from Google Fonts to match the AgentHub app; a system-font
-fallback is in place if you're offline.
+Fonts (Geist, JetBrains Mono, Instrument Serif — the same three the app uses, per
+`design/studio/app/layout.tsx`) load from Google Fonts; a system-font fallback is in place if
+you're offline.
 
 ## Preview locally
 
@@ -64,7 +73,8 @@ and `changelog.html`. That forces browsers to fetch the new file immediately. (A
 
 ## Notes
 
-- The `git clone …` URL in the "Get started" terminal is a placeholder — swap in the real repo URL
-  once AgentHub has a public (or internal) remote.
+- The Download button is a placeholder (`href="#download"`, reads "coming") and the Plan page's Buy
+  button is a bare `href="#"` — both intentional until v1.0 actually ships and there's a real .dmg /
+  payment flow. Don't wire them up early.
 - For the richest social previews, some scrapers prefer a raster image. If you need one, export
   `assets/og.svg` to a 1200×630 PNG and update the `og:image` / `twitter:image` tags.

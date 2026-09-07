@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plan — AgentHub</title>
+  <meta name="description" content="AgentHub Free vs Plan: what's free forever, what Plan lifts, and the proposed price — coming with v1.0." />
+  <meta name="theme-color" content="#f3f2f9" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0a0912" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="../assets/favicon.svg" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Plan — AgentHub" />
+  <meta property="og:description" content="Free forever, ceilings only. AgentHub Plan lifts them — pricing proposed, coming with v1.0." />
+  <meta property="og:image" content="../assets/og.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css?v=1" />
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.6-4.04-1.6-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.3 3.5 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .3Z"/></symbol>
+</svg>
+
+<div class="bg-decor" aria-hidden="true">
+  <div class="grid"></div>
+  <div class="glow"></div>
+</div>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html" aria-label="AgentHub home">
+      <img class="mark" src="../assets/favicon.svg" alt="" width="28" height="28" />
+      AgentHub <span class="ver">V4</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="../index.html#free">Free</a>
+      <a href="../index.html#worktrees">Worktrees</a>
+      <a href="../index.html#workflows">Workflows</a>
+      <a href="index.html">Plan</a>
+      <a href="../changelog.html">Changelog</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-ghost" href="../index.html#download">Download for Mac</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="22"><use id="navToggleIcon" href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../index.html#free">Free</a>
+    <a href="../index.html#worktrees">Worktrees</a>
+    <a href="../index.html#workflows">Workflows</a>
+    <a href="index.html">Plan</a>
+    <a href="../changelog.html">Changelog</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="section-pad" style="padding-bottom:0">
+    <div class="container">
+      <div class="page-head reveal">
+        <span class="eyebrow"><span class="dot"></span> Coming with v1.0</span>
+        <h1>Free forever. Plan lifts the ceilings.</h1>
+        <p>AgentHub Free runs every template, every workflow and every skill — nothing is ever locked
+          away. Free only ceilings the scale: how many sessions run at once, how far a review fans out,
+          whether a stuck step can fail over onto a paid lane. AgentHub Plan lifts every one of those
+          ceilings. There is no payment flow yet — this page is the plan, ahead of the switch to turn it
+          on.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ceilings table ============ -->
+  <section class="section-pad" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="dot"></span> The real ceilings</span>
+        <h2>What Free gives you, and what Plan lifts.</h2>
+        <p>Pulled straight from the daemon's own limits (<code>crates/agenthubd/src/plan.rs</code>) — this
+          is what the app actually enforces today, not a wish list.</p>
+      </div>
+      <table class="plan-table reveal">
+        <caption>Free vs AgentHub Plan</caption>
+        <thead><tr><th>Ceiling</th><th>Free</th><th>AgentHub Plan</th></tr></thead>
+        <tbody>
+          <tr><td>Concurrent sessions</td><td class="free">2</td><td class="plan">Unlimited</td></tr>
+          <tr><td>History kept</td><td class="free">14 days</td><td class="plan">Unlimited</td></tr>
+          <tr><td>Workflows at once</td><td class="free">1</td><td class="plan">Unlimited</td></tr>
+          <tr><td>Review fan-out</td><td class="free">2 lanes</td><td class="plan">5 lanes</td></tr>
+          <tr><td>Failover to a paid lane</td><td class="free">No</td><td class="plan">Yes</td></tr>
+          <tr><td>Fast context on every lane</td><td class="free">No</td><td class="plan">Yes</td></tr>
+          <tr class="same"><td colspan="3">Every tool, every lane, every skill — on both.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ pricing ============ -->
+  <section class="section-pad" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="dot"></span> Proposed price</span>
+        <h2>AgentHub Plan — one time, per Mac.</h2>
+        <p>Not live yet. This is the price the app is being built toward for v1.0.</p>
+      </div>
+      <div class="price-grid reveal">
+        <div class="price-card hi">
+          <span class="tag">1 Mac</span>
+          <div class="amount">$39</div>
+          <p>One-time. 12 months of updates included, then the app keeps working as it is.</p>
+        </div>
+        <div class="price-card">
+          <span class="tag">3 Macs</span>
+          <div class="amount">$79</div>
+          <p>Same terms, for the Macs you actually use.</p>
+        </div>
+        <div class="price-card">
+          <span class="tag">Every plan</span>
+          <div class="amount" style="font-size:22px">7-day<br/>money back</div>
+          <p>No account required — a key you paste into Settings › Plan.</p>
+        </div>
+      </div>
+      <div class="plan-cta-row">
+        <a class="btn btn-primary btn-lg" href="#" aria-disabled="true">Buy Plan — coming with v1.0</a>
+        <a class="btn btn-ghost btn-lg" href="https://github.com/agenthubapp/agenthubapp.github.io/releases"><svg aria-hidden="true"><use href="#i-github"/></svg> Watch releases on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ how it works today ============ -->
+  <section class="section-pad" style="padding-top:0">
+    <div class="container feature">
+      <div class="feature-text">
+        <span class="eyebrow"><span class="dot"></span> How it works today</span>
+        <h2>Have a key? Paste it in Settings › Plan.</h2>
+        <p>A Plan key is one string, checked offline against a signed header — no account, no phone
+          home. Paste it, and every ceiling above lifts on the next check.</p>
+        <div class="key-row">
+          <span class="key-input">AGH1-XXXXX-XXXXX-XXXXX-XXXXX</span>
+        </div>
+      </div>
+      <div class="frame reveal">
+        <img class="shot-light" src="../assets/plan-spacing-app-light.png" alt="AgentHub Settings, Plan tab: Current plan Free, the ceilings table (concurrent sessions, history, workflows, review fan-out, failover, fast context), and a field to paste a Plan key." loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section-pad" style="padding-top:0">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow"><span class="dot"></span> FAQ</span>
+        <h2>A few honest answers.</h2>
+      </div>
+      <div class="faq reveal">
+        <div class="faq-item">
+          <h4>Is Free really free?</h4>
+          <p>Yes. The free lane needs no key and no account — it's the default the app ships with.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What does Plan gate?</h4>
+          <p>Ceilings, never tools. Every feature on this site works on Free; Plan raises the numbers
+            above — concurrency, history, fan-out, failover and fast context.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Does it phone home?</h4>
+          <p>No. A Plan key is checked offline, on your Mac, against a signature — there is no server
+            call and no account tied to it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container" style="text-align:center; padding-bottom:60px">
+    <a class="btn btn-ghost" href="../index.html"><svg aria-hidden="true"><use href="#i-back"/></svg> Back to home</a>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="../index.html"><img class="mark" src="../assets/favicon.svg" alt="" width="28" height="28" /> AgentHub</a>
+        <p>Free coding agents on your Mac. No API key, worktree per session, a task board that finds the work, and skills you bring yourself.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h5>Product</h5>
+          <a href="../index.html#free">Free models</a>
+          <a href="../index.html#worktrees">Worktrees</a>
+          <a href="../index.html#workflows">Workflows</a>
+        </div>
+        <div class="foot-col">
+          <h5>Resources</h5>
+          <a href="index.html">Plan</a>
+          <a href="../changelog.html">Changelog</a>
+          <a href="https://github.com/agenthubapp/agenthubapp.github.io/releases">Watch releases on GitHub</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> AgentHub</span>
+      <span class="foot-note"><span class="sdot"></span> Local-first · no telemetry</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../app.js?v=1" defer></script>
+</body>
+</html>

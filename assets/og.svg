@@ -41,23 +41,23 @@
     </g>
   </g>
 
-  <text x="240" y="212" fill="#7c7f8a" font-size="26" font-weight="600" letter-spacing="6">LOCAL-FIRST MISSION CONTROL</text>
+  <text x="240" y="212" fill="#7c7f8a" font-size="26" font-weight="600" letter-spacing="6">FREE CODING AGENTS · NO KEY</text>
   <text x="238" y="300" fill="url(#txt)" font-size="92" font-weight="700" letter-spacing="-3">AgentHub</text>
 
-  <text x="96" y="430" fill="#e7e8ec" font-size="40" font-weight="600" letter-spacing="-1">Ship Jira tickets with AI agents — end to end, on your Mac.</text>
+  <text x="96" y="430" fill="#e7e8ec" font-size="40" font-weight="600" letter-spacing="-1">Runs on your Mac. Nothing to sign up for.</text>
 
   <g transform="translate(96 484)" font-size="24" font-weight="500" fill="#9ca0ad">
-    <text x="0" y="0">Jira board</text>
-    <text x="150" y="0" fill="#6366f1">→</text>
-    <text x="180" y="0">Context Pack</text>
-    <text x="360" y="0" fill="#6366f1">→</text>
-    <text x="390" y="0">Agent worktree</text>
-    <text x="600" y="0" fill="#6366f1">→</text>
-    <text x="630" y="0">Deep QA gate</text>
-    <text x="822" y="0" fill="#6366f1">→</text>
-    <text x="852" y="0">Draft PR</text>
+    <text x="0" y="0">Free lane</text>
+    <text x="140" y="0" fill="#6366f1">→</text>
+    <text x="170" y="0">Worktree per session</text>
+    <text x="430" y="0" fill="#6366f1">→</text>
+    <text x="460" y="0">Notes</text>
+    <text x="560" y="0" fill="#6366f1">→</text>
+    <text x="590" y="0">Workflows</text>
+    <text x="740" y="0" fill="#6366f1">→</text>
+    <text x="770" y="0">Commit</text>
   </g>
 
   <rect x="96" y="540" width="1008" height="1" fill="#ffffff" fill-opacity="0.08"/>
-  <text x="96" y="582" fill="#7c7f8a" font-size="22" font-weight="500">Bring-your-own agent · Autopilot · Local RAG wiki · UI-vs-Figma proof · Metrics</text>
+  <text x="96" y="582" fill="#7c7f8a" font-size="22" font-weight="500">No API key · parallel sessions · your own skills · local and private</text>
 </svg>
