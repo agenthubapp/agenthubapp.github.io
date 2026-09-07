@@ -8,18 +8,25 @@ no framework**. Just open it.
 ## Files
 
 ```
-index.html      # the landing page (8 feature sections + hero, semantic + an inline SVG icon sprite)
+index.html      # the landing page (hero, 3-step storyboard, 8 feature sections, a comparison table,
+                 # semantic + an inline SVG icon sprite)
 changelog.html  # the changelog page (shares styles.css + app.js)
 plan/index.html # Free vs Plan detail page (ceilings table, proposed price, FAQ)
-styles.css      # theme lifted from the app's own design/studio/app/globals.css tokens; light is the
-                # base palette, dark overrides under prefers-color-scheme — same two themes as the app
-app.js          # sticky-nav border, mobile menu, footer year — that's all of it
+styles.css      # theme lifted from the app's own design/studio/app/globals.css tokens; DARK is the
+                 # base palette now, system light overrides under prefers-color-scheme: light —
+                 # same two themes as the app, just the opposite default
+app.js          # sticky-nav border, mobile menu, footer year, hero-video enable (skipped under
+                 # reduced motion), storyboard scroll-highlight (IntersectionObserver)
 assets/
   favicon.svg   # the AgentHub "boxes" glyph on the brand gradient
   og.svg        # 1200×630 Open Graph / social preview image
-  build53-*.png, tasks-*.png, picker-ratings-app-*.png, plan-spacing-app-*.png,
-  terminal-padding-after-*.png, turn-summary-app-*.png
+  build53-*.png, build54-*.png, notes-board-*.png, tasks-*.png, picker-ratings-app-*.png,
+  plan-spacing-app-*.png, terminal-padding-after-*.png, turn-summary-app-*.png
                 # real screenshots of the installed app, reused as site imagery (each ≤300 KB)
+  hero-loop-{light,dark}.{mp4,webm}
+                # the hero's silent looping clip — a crossfade slideshow of 5 of the real screenshots
+                # above, built with ffmpeg (xfade), not a live capture; turn-summary-app-{light,dark}
+                # doubles as the <video poster> — what shows with no JS or prefers-reduced-motion
 docs/           # Playwright proof screenshots + this session's report (not published, just proof)
 ```
 

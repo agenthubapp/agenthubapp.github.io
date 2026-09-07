@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AgentHub — free coding agents, no key, on your Mac</title>
   <meta name="description" content="AgentHub runs coding agents on your Mac: a free lane with no API key, a worktree for every session, a task board that finds work in your repo, five workflow templates with automatic failover, and skills you can add from GitHub. v1.0 is coming." />
+  <meta name="theme-color" content="#0a0912" />
   <meta name="theme-color" content="#f3f2f9" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0a0912" media="(prefers-color-scheme: dark)" />
 
@@ -27,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css?v=1" />
+  <link rel="stylesheet" href="styles.css?v=2" />
 </head>
 <body>
 
@@ -66,6 +67,7 @@
       <a href="#worktrees">Worktrees</a>
       <a href="#notes">Notes</a>
       <a href="#workflows">Workflows</a>
+      <a href="#compare">Compare</a>
       <a href="plan/index.html">Plan</a>
       <a href="changelog.html">Changelog</a>
     </nav>
@@ -82,6 +84,7 @@
     <a href="#notes">Notes</a>
     <a href="#workflows">Workflows</a>
     <a href="#skills">Skills</a>
+    <a href="#compare">Compare</a>
     <a href="plan/index.html">Plan</a>
     <a href="changelog.html">Changelog</a>
   </div>
@@ -109,10 +112,52 @@
           <span><svg aria-hidden="true"><use href="#i-branch"/></svg> Worktree per session</span>
           <span><svg aria-hidden="true"><use href="#i-lock"/></svg> Keys in your keychain</span>
         </div>
+        <div class="hero-stats" aria-label="Live from the app, checked at build time">
+          <span class="star-chip"><svg aria-hidden="true"><use href="#i-spark"/></svg> 95 free models</span>
+          <span class="star-chip"><svg aria-hidden="true"><use href="#i-spark"/></svg> 5 workflows</span>
+          <span class="star-chip"><svg aria-hidden="true"><use href="#i-spark"/></svg> 6 skills</span>
+        </div>
       </div>
-      <div class="hero-visual reveal">
-        <img class="shot-light" src="assets/turn-summary-app-light.png" alt="AgentHub session view: a finished turn, the Changes panel with a diff of src/slug.js, and a Commit button, running on the Free lane's auto/best-fast model." loading="eager" />
-        <img class="shot-dark" src="assets/turn-summary-app-dark.png" alt="AgentHub session view: a finished turn, the Changes panel with a diff of src/slug.js, and a Commit button, running on the Free lane's auto/best-fast model." loading="eager" />
+      <div class="hero-visual">
+        <img class="hero-poster shot-light" src="assets/turn-summary-app-light.png" alt="AgentHub session view: a finished turn, the Changes panel with a diff of src/slug.js, and a Commit button, running on the Free lane's auto/best-fast model." loading="eager" />
+        <img class="hero-poster shot-dark" src="assets/turn-summary-app-dark.png" alt="AgentHub session view: a finished turn, the Changes panel with a diff of src/slug.js, and a Commit button, running on the Free lane's auto/best-fast model." loading="eager" />
+        <video class="vid-light" autoplay muted loop playsinline preload="none" poster="assets/turn-summary-app-light.png" aria-label="A silent 10-second loop of real AgentHub screens: a finished turn's diff, the Notes board, a Fix workflow result, the free-model picker, and the Plan ceilings table.">
+          <source src="assets/hero-loop-light.webm" type="video/webm" />
+          <source src="assets/hero-loop-light.mp4" type="video/mp4" />
+        </video>
+        <video class="vid-dark" autoplay muted loop playsinline preload="none" poster="assets/turn-summary-app-dark.png" aria-label="A silent 10-second loop of real AgentHub screens: a finished turn's diff, the Notes board, a Fix workflow result, the free-model picker, and the Plan ceilings table.">
+          <source src="assets/hero-loop-dark.webm" type="video/webm" />
+          <source src="assets/hero-loop-dark.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ storyboard: Notes → Execute → Merge ============ -->
+  <section class="section-pad" id="how">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow"><span class="dot"></span> The loop</span>
+        <h2>Notes to merged, in three steps.</h2>
+        <p>Every session — whether it started from a Notes card or a typed request — moves through the
+          same three stages.</p>
+      </div>
+      <div class="storyboard">
+        <div class="story-step">
+          <h3>Notes</h3>
+          <p>The board scans your repo for TODOs, FIXMEs, <code>.agenthub/tasks/</code> files, open
+            issues and failing tests, and turns each into a card next to anything you typed yourself.</p>
+        </div>
+        <div class="story-step">
+          <h3>Execute</h3>
+          <p>Run starts a session in its own git worktree. It picks a workflow — Review, Build, Fix,
+            Test or Release — and switches lanes on its own, quietly, if one stalls.</p>
+        </div>
+        <div class="story-step">
+          <h3>Merge</h3>
+          <p>The result lands as one card: a diff, a findings list, or a test report. Commit sends it to
+            main through a merge queue, not a rushed push while something else is still running.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -206,6 +251,81 @@
       <div class="frame reveal">
         <img class="shot-light" src="assets/tasks-result-app-light.png" alt="A finished Fix workflow's result card: DONE, ran on Free, 2 files changed, tests green, with View diff, Reopen as new card and Commit to main." loading="lazy" />
       </div>
+    </div>
+  </section>
+
+  <!-- ============ compare ============ -->
+  <section class="section-pad" id="compare">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow"><span class="dot"></span> How it stacks up</span>
+        <h2>Every worktree-per-session tool has its own answer here.</h2>
+        <p>Six facts, checked against each product's own docs and pricing pages, not guessed.
+          <span class="star-chip" style="margin-left:2px"><svg aria-hidden="true"><use href="#i-spark"/></svg> AgentHub</span> marked where it's the only one, <code>—</code> where a source didn't say.</p>
+      </div>
+      <div class="compare-scroll">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th scope="col">Product</th>
+              <th scope="col">Free lane, no key</th>
+              <th scope="col">Worktree per session</th>
+              <th scope="col">Built-in workflow templates</th>
+              <th scope="col">Automatic failover</th>
+              <th scope="col">Runs locally</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">AgentHub</th>
+              <td class="us">Yes</td>
+              <td class="us">Yes</td>
+              <td class="us">Yes — 5</td>
+              <td class="us">Yes</td>
+              <td class="us">Yes</td>
+              <td>Free; Plan lifts ceilings</td>
+            </tr>
+            <tr>
+              <th scope="row">Conductor</th>
+              <td>No — BYO Claude/Codex subscription</td>
+              <td>Yes</td>
+              <td class="na">—</td>
+              <td class="na">—</td>
+              <td>Yes — native macOS app</td>
+              <td>Free (you pay your own agent subscription)</td>
+            </tr>
+            <tr>
+              <th scope="row">vibe-kanban</th>
+              <td class="na">—</td>
+              <td>Yes</td>
+              <td class="na">—</td>
+              <td class="na">—</td>
+              <td>Yes — open source, self-hosted</td>
+              <td>Free / open source</td>
+            </tr>
+            <tr>
+              <th scope="row">Cursor</th>
+              <td>No — bundled in a paid Cursor tier</td>
+              <td>Yes</td>
+              <td class="na">—</td>
+              <td class="na">—</td>
+              <td>Local worktree + cloud, unified</td>
+              <td>Cursor Pro / Business subscription</td>
+            </tr>
+            <tr>
+              <th scope="row">Codex</th>
+              <td>No — needs a ChatGPT/OpenAI account</td>
+              <td>Yes — when the client offers it</td>
+              <td class="na">—</td>
+              <td class="na">—</td>
+              <td>No — runs in a cloud sandbox</td>
+              <td>Free / Go / Plus $20/mo / Pro 5x $100/mo / Pro 20x / Business / Enterprise</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">Sourced from each product's own docs, GitHub repo and pricing page as of September 2026. Products change; check their current pages before relying on this.</p>
     </div>
   </section>
 
@@ -316,6 +436,7 @@
           <a href="#workflows">Workflows</a>
           <a href="#skills">Skills</a>
           <a href="#agents">Custom agents</a>
+          <a href="#compare">Compare</a>
         </div>
         <div class="foot-col">
           <h5>Resources</h5>
@@ -332,6 +453,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=1" defer></script>
+<script src="app.js?v=2" defer></script>
 </body>
 </html>

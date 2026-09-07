@@ -8,20 +8,23 @@
    ========================================================================= */
 
 :root {
-  /* ground + surfaces — light is the app's "paper ngả tím" */
-  --k0: #f3f2f9; --k1: #fafafd; --k2: #ffffff; --k3: #ecebf5; --k4: #e0ddef;
-  --l1: rgba(23,21,42,.08); --l2: rgba(23,21,42,.14); --l3: rgba(23,21,42,.22);
-  --t1: #17152a; --t2: #3f3b5a; --t3: #726d8c; --t4: #9d99b0;
+  /* Dark is the site's default ground now — most visitors land with no explicit
+     OS preference, and dark is where the app's own screenshots (all captured on
+     dark) read as native. System light (prefers-color-scheme: light) overrides
+     below with the app's "paper ngả tím" palette. */
+  --k0: #0a0912; --k1: #0f0e19; --k2: #151422; --k3: #1c1b2b; --k4: #262439;
+  --l1: rgba(255,255,255,.07); --l2: rgba(255,255,255,.14); --l3: rgba(255,255,255,.22);
+  --t1: #f3f2f8; --t2: #c9c6d6; --t3: #8b869e; --t4: #5c5872;
 
   --brand-a: #6366f1; --brand-b: #8b5cf6;
-  --accent: #6c5cf0; --accent-soft: rgba(108,92,240,.10); --accent-line: rgba(108,92,240,.45); --accent-glow: rgba(108,92,240,.25);
+  --accent: #7c6cf6; --accent-soft: rgba(124,108,246,.14); --accent-line: rgba(139,92,246,.5); --accent-glow: rgba(124,108,246,.35);
   --grad: linear-gradient(135deg, var(--brand-a), var(--brand-b));
   --grad-text: linear-gradient(115deg, var(--brand-a) 10%, var(--brand-b) 90%);
 
-  --work: #2f7fe0; --need: #d48f0c; --done: #1f9d68; --fail: #d5473d;
+  --work: #4d9bf0; --need: #f0a92c; --done: #46c98d; --fail: #e2564d;
 
-  --shadow-1: 0 1px 2px rgba(23,21,42,.05), 0 10px 28px rgba(23,21,42,.07);
-  --shadow-2: 0 2px 4px rgba(23,21,42,.06), 0 28px 70px rgba(23,21,42,.12);
+  --shadow-1: 0 1px 0 rgba(255,255,255,.03) inset, 0 8px 24px rgba(0,0,0,.35);
+  --shadow-2: 0 1px 0 rgba(255,255,255,.05) inset, 0 28px 70px rgba(0,0,0,.5);
 
   --r-sm: 5px; --r-md: 7px; --r-lg: 10px; --r-xl: 16px;
   --dur-1: 100ms; --dur-2: 200ms; --dur-3: 350ms;
@@ -33,21 +36,21 @@
   --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
   --font-display: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
 
-  color-scheme: light;
+  color-scheme: dark;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --k0: #0a0912; --k1: #0f0e19; --k2: #151422; --k3: #1c1b2b; --k4: #262439;
-    --l1: rgba(255,255,255,.07); --l2: rgba(255,255,255,.14); --l3: rgba(255,255,255,.22);
-    --t1: #f3f2f8; --t2: #c9c6d6; --t3: #8b869e; --t4: #5c5872;
+    --k0: #f3f2f9; --k1: #fafafd; --k2: #ffffff; --k3: #ecebf5; --k4: #e0ddef;
+    --l1: rgba(23,21,42,.08); --l2: rgba(23,21,42,.14); --l3: rgba(23,21,42,.22);
+    --t1: #17152a; --t2: #3f3b5a; --t3: #726d8c; --t4: #9d99b0;
 
-    --accent: #7c6cf6; --accent-soft: rgba(124,108,246,.14); --accent-line: rgba(139,92,246,.5); --accent-glow: rgba(124,108,246,.35);
-    --work: #4d9bf0; --need: #f0a92c; --done: #46c98d; --fail: #e2564d;
+    --accent: #6c5cf0; --accent-soft: rgba(108,92,240,.10); --accent-line: rgba(108,92,240,.45); --accent-glow: rgba(108,92,240,.25);
+    --work: #2f7fe0; --need: #d48f0c; --done: #1f9d68; --fail: #d5473d;
 
-    --shadow-1: 0 1px 0 rgba(255,255,255,.03) inset, 0 8px 24px rgba(0,0,0,.35);
-    --shadow-2: 0 1px 0 rgba(255,255,255,.05) inset, 0 28px 70px rgba(0,0,0,.5);
-    color-scheme: dark;
+    --shadow-1: 0 1px 2px rgba(23,21,42,.05), 0 10px 28px rgba(23,21,42,.07);
+    --shadow-2: 0 2px 4px rgba(23,21,42,.06), 0 28px 70px rgba(23,21,42,.12);
+    color-scheme: light;
   }
 }
 
@@ -71,7 +74,7 @@ body {
 a { color: inherit; text-decoration: none; }
 img, svg { display: block; max-width: 100%; }
 ul { list-style: none; padding: 0; }
-h1, h2, h3, h4 { letter-spacing: -0.02em; line-height: 1.1; font-weight: 600; text-wrap: balance; }
+h1, h2, h3, h4 { letter-spacing: -0.024em; line-height: 1.06; font-weight: 600; text-wrap: balance; }
 code, kbd { font-family: var(--font-mono); }
 kbd { font-size: 11px; border: 1px solid var(--l2); border-radius: var(--r-sm); padding: 1px 6px; background: var(--k3); color: var(--t3); }
 ::selection { background: var(--accent-soft); color: var(--t1); }
@@ -81,7 +84,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
 .eyebrow { display: inline-flex; align-items: center; gap: 8px; font: 700 11px var(--font-mono); letter-spacing: .13em; text-transform: uppercase; color: var(--t3); margin-bottom: 14px; }
 .eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent-glow); }
 .section-head { max-width: 640px; margin-bottom: 40px; }
-.section-head h2 { font-size: clamp(26px, 3.4vw, 38px); }
+.section-head h2 { font-size: clamp(30px, 3.9vw, 44px); font-family: var(--font-display); font-weight: 500; letter-spacing: -0.01em; }
 .section-head p { margin-top: 12px; color: var(--t3); font-size: 16.5px; }
 .section-pad { padding-block: 88px; border-top: 1px solid var(--l1); }
 @media (max-width: 720px) { .section-pad { padding-block: 56px; } }
@@ -97,9 +100,9 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
 }
 .bg-decor .glow { position: absolute; border-radius: 50%; filter: blur(120px); background: var(--brand-a); opacity: .16; top: -320px; left: 50%; transform: translateX(-58%); width: 900px; height: 600px; }
 
-/* ---------- nav ---------- */
-.nav { position: sticky; top: 0; z-index: 40; background: color-mix(in srgb, var(--k0) 86%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid transparent; transition: border-color var(--dur-2) var(--ease-out); }
-.nav.scrolled { border-bottom-color: var(--l1); }
+/* ---------- nav (glass: translucent + blurred, sharpens once scrolled) ---------- */
+.nav { position: sticky; top: 0; z-index: 40; background: color-mix(in srgb, var(--k0) 70%, transparent); backdrop-filter: blur(14px) saturate(1.4); -webkit-backdrop-filter: blur(14px) saturate(1.4); border-bottom: 1px solid transparent; transition: border-color var(--dur-2) var(--ease-out), background var(--dur-2) var(--ease-out); }
+.nav.scrolled { border-bottom-color: var(--l1); background: color-mix(in srgb, var(--k0) 88%, transparent); }
 .nav-inner { height: 64px; display: flex; align-items: center; gap: 20px; }
 .brand { display: flex; align-items: center; gap: 9px; font: 600 16px var(--font-ui); letter-spacing: -0.02em; color: var(--t1); }
 .brand .mark { border-radius: 7px; }
@@ -122,26 +125,49 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
 .hero { padding-block: 76px 40px; }
 .hero-grid { display: grid; grid-template-columns: 1fr; gap: 40px; }
 .hero-copy { max-width: 660px; }
-.hero-copy h1 { font-size: clamp(34px, 5.4vw, 56px); }
+.hero-copy h1 { font-size: clamp(38px, 6.2vw, 64px); font-family: var(--font-display); font-weight: 500; letter-spacing: -0.015em; }
 .hero-sub { margin-top: 18px; font-size: 17.5px; color: var(--t2); max-width: 560px; }
 .hero-sub b { color: var(--t1); }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .hero-meta { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 26px; font: 12.5px var(--font-mono); color: var(--t3); }
 .hero-meta span { display: flex; align-items: center; gap: 7px; }
 .hero-meta svg { width: 14px; height: 14px; color: var(--accent); }
-.hero-visual { border-radius: var(--r-xl); overflow: hidden; border: 1px solid var(--l1); box-shadow: var(--shadow-2); background: var(--k2); }
-.hero-visual img { width: 100%; height: auto; }
+.hero-visual { border-radius: var(--r-xl); overflow: hidden; border: 1px solid var(--l1); box-shadow: var(--shadow-2); background: var(--k2); position: relative; }
+.hero-visual img, .hero-visual video { width: 100%; height: auto; }
+/* Default (no JS, or JS hasn't run yet): the still poster shows, swapped by
+   theme like any other shot pair; the <video> stays off. JS only turns the
+   video on — via .js-video — for a visitor who hasn't asked for less motion,
+   at which point the poster is hidden and the matching-theme video shows. */
+.hero-visual video { display: none; }
+.hero-visual.js-video .hero-poster { display: none; }
+.hero-visual.js-video video.vid-dark { display: block; }
+@media (prefers-color-scheme: light) {
+  .hero-visual.js-video video.vid-dark { display: none; }
+  .hero-visual.js-video video.vid-light { display: block; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-visual video { display: none !important; }
+  .hero-visual .hero-poster { display: block !important; }
+}
 
-/* ---------- shot pairs (light/dark screenshot swap, CSS-only) ---------- */
-.shot-dark { display: none; }
-@media (prefers-color-scheme: dark) { .shot-light { display: none; } .shot-dark { display: block; } }
-.frame { border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--l1); box-shadow: var(--shadow-1); background: var(--k2); }
-.frame img { width: 100%; height: auto; display: block; }
+/* ---------- shot pairs (light/dark screenshot swap, CSS-only) ----------
+   Dark is the default ground now, so the dark-themed asset shows by default;
+   system light swaps it for the light-themed one. */
+.shot-light { display: none; }
+.shot-dark { display: block; }
+@media (prefers-color-scheme: light) {
+  .shot-light { display: block; }
+  .shot-dark { display: none; }
+}
+.frame { border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--l1); box-shadow: var(--shadow-1); background: var(--k2); transition: transform var(--dur-2) var(--ease-out), box-shadow var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out); }
+.frame:hover { transform: translateY(-4px); box-shadow: var(--shadow-2); border-color: var(--accent-line); }
+.frame img, .frame video { width: 100%; height: auto; display: block; }
 .cap { margin-top: 12px; font: 12px var(--font-mono); color: var(--t4); }
 
 /* ---------- feature sections ---------- */
 .feature { display: grid; grid-template-columns: 1fr; gap: 44px; align-items: center; }
 .feature.flip .feature-text { order: 2; }
+.feature-text h2 { font-size: clamp(27px, 3.2vw, 36px); font-family: var(--font-display); font-weight: 500; letter-spacing: -0.01em; }
 .feature-text p { margin-top: 14px; color: var(--t2); font-size: 16px; }
 .feature-text p + p { margin-top: 10px; }
 .feature-shots { display: grid; gap: 16px; }
@@ -152,13 +178,23 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
 
 /* ---------- workflow chips ---------- */
 .wf-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
-.wf-chip { font: 700 11px var(--font-mono); letter-spacing: .06em; text-transform: uppercase; padding: 6px 11px; border-radius: 999px; border: 1px solid var(--l2); color: var(--t2); background: var(--k2); }
+.wf-chip { font: 700 11px var(--font-mono); letter-spacing: .06em; text-transform: uppercase; padding: 6px 11px; border-radius: 999px; border: 1px solid var(--l2); color: var(--t2); background: var(--k2); transition: transform var(--dur-1) var(--ease-out), border-color var(--dur-2), color var(--dur-2); }
+.wf-chip:hover { transform: translateY(-2px); border-color: var(--accent-line); color: var(--t1); }
 
 /* ---------- skills / agents lists ---------- */
 .pill-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-.pill { display: flex; align-items: center; gap: 8px; padding: 9px 13px; border-radius: var(--r-md); border: 1px solid var(--l1); background: var(--k2); font-size: 13.5px; color: var(--t2); box-shadow: var(--shadow-1); }
+.pill { display: flex; align-items: center; gap: 8px; padding: 9px 13px; border-radius: var(--r-md); border: 1px solid var(--l1); background: var(--k2); font-size: 13.5px; color: var(--t2); box-shadow: var(--shadow-1); transition: transform var(--dur-2) var(--ease-out), box-shadow var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out); }
+.pill:hover { transform: translateY(-3px); box-shadow: var(--shadow-2); border-color: var(--accent-line); }
 .pill b { color: var(--t1); }
 .pill .src { color: var(--t4); font: 11px var(--font-mono); }
+
+/* ---------- star chip (built-in / shipped marker) ---------- */
+.star-chip { display: inline-flex; align-items: center; gap: 5px; padding: 5px 10px 5px 8px; border-radius: 999px; border: 1px solid var(--accent-line); background: var(--accent-soft); color: var(--t1); font: 700 11px var(--font-mono); letter-spacing: .04em; transition: transform var(--dur-1) var(--ease-out); }
+.star-chip svg { width: 12px; height: 12px; color: var(--accent); fill: var(--accent); }
+.star-chip:hover { transform: translateY(-2px) scale(1.03); }
+
+/* ---------- hero stat line (real counts, baked at build time) ---------- */
+.hero-stats { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
 
 /* ---------- plan table (shared: home summary + /plan/) ---------- */
 .plan-table { width: 100%; border-collapse: collapse; margin-top: 22px; font-size: 14px; background: var(--k2); border: 1px solid var(--l1); border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow-1); }
@@ -191,9 +227,39 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
 .key-row { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
 .key-input { flex: 1; min-width: 220px; font: 13px var(--font-mono); padding: 11px 14px; border-radius: var(--r-md); border: 1px solid var(--l2); background: var(--k1); color: var(--t3); }
 
+/* ---------- storyboard (Notes → Execute → Merge, lights up on scroll) ---------- */
+.storyboard { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 8px; counter-reset: story; }
+@media (min-width: 760px) { .storyboard { grid-template-columns: repeat(3, 1fr); gap: 22px; } }
+.story-step {
+  /* Always fully visible by default — the "active" state below only adds a
+     highlight as it scrolls into view; nothing is ever hidden waiting on JS,
+     so this reads correctly with no script, on a full-page capture, and with
+     reduced motion. */
+  counter-increment: story; position: relative; border: 1px solid var(--l1); background: var(--k2);
+  border-radius: var(--r-lg); padding: 24px 22px; box-shadow: var(--shadow-1);
+  transition: border-color var(--dur-3) var(--ease-out), box-shadow var(--dur-3) var(--ease-out), transform var(--dur-3) var(--ease-out);
+}
+.story-step::before { content: counter(story); display: flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background: var(--k3); color: var(--t3); font: 700 12px var(--font-mono); margin-bottom: 14px; transition: background var(--dur-3), color var(--dur-3); }
+.story-step h3 { font-size: 18px; font-family: var(--font-display); font-weight: 500; }
+.story-step p { margin-top: 8px; color: var(--t3); font-size: 14px; }
+.story-step.active { border-color: var(--accent-line); box-shadow: 0 0 0 1px var(--accent-line), var(--shadow-2); transform: translateY(-2px); }
+.story-step.active::before { background: var(--grad); color: #fff; }
+
+/* ---------- comparison table (vs Conductor / vibe-kanban / Cursor / Codex) ---------- */
+.compare-scroll { overflow-x: auto; margin-top: 26px; border-radius: var(--r-lg); border: 1px solid var(--l1); box-shadow: var(--shadow-1); }
+.compare-table { width: 100%; min-width: 640px; border-collapse: collapse; font-size: 13.5px; background: var(--k2); }
+.compare-table th, .compare-table td { padding: 12px 16px; text-align: left; border-top: 1px solid var(--l1); white-space: normal; }
+.compare-table thead th { border-top: 0; font: 700 10.5px var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--t4); background: var(--k3); position: sticky; top: 0; }
+.compare-table th:first-child, .compare-table td:first-child { color: var(--t2); font-weight: 600; white-space: nowrap; }
+.compare-table td.us { color: var(--t1); font-weight: 600; }
+.compare-table td.us::before { content: '★ '; color: var(--accent); }
+.compare-table td.na { color: var(--t4); font: 13px var(--font-mono); }
+.compare-note { margin-top: 12px; color: var(--t4); font-size: 12.5px; }
+.compare-note a { text-decoration: underline; }
+
 /* ---------- CTA / download section ---------- */
 .cta-band { text-align: center; padding-block: 80px; }
-.cta-band h2 { font-size: clamp(28px, 4vw, 40px); }
+.cta-band h2 { font-size: clamp(32px, 4.6vw, 46px); font-family: var(--font-display); font-weight: 500; letter-spacing: -0.01em; }
 .cta-band p { margin-top: 14px; color: var(--t3); font-size: 16px; }
 .cta-band .hero-cta { justify-content: center; margin-top: 26px; }
 .fine { margin-top: 16px; color: var(--t4); font: 12px var(--font-mono); }
@@ -212,7 +278,7 @@ footer { border-top: 1px solid var(--l1); padding-block: 52px 28px; margin-top: 
 
 /* ---------- changelog ---------- */
 .page-head { max-width: 680px; margin-bottom: 44px; }
-.page-head h1 { font-size: clamp(30px, 4.4vw, 44px); }
+.page-head h1 { font-size: clamp(34px, 5vw, 50px); font-family: var(--font-display); font-weight: 500; letter-spacing: -0.01em; }
 .page-head p { margin-top: 12px; color: var(--t3); font-size: 16px; }
 .timeline { display: flex; flex-direction: column; gap: 30px; max-width: 780px; }
 .release { position: relative; }
@@ -231,11 +297,6 @@ footer { border-top: 1px solid var(--l1); padding-block: 52px 28px; margin-top: 
 @media (min-width: 900px) {
   .hero-grid { grid-template-columns: 1fr 1.15fr; align-items: center; }
   .feature { grid-template-columns: 1fr 1fr; gap: 56px; }
-  /* At this width the hero's screenshot sits in the same right-hand column as the next
-     section's screenshot, with no heading in that column to signal a new section — give
-     #free extra top space so its own screenshot never reads as a second one glued to the
-     hero's. (Narrower layouts stack text above image, so this isn't needed there.) */
-  #free { padding-top: 200px; }
 }
 @media (max-width: 860px) {
   .nav-links, .nav-right .btn-ghost { display: none; }
