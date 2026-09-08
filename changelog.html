@@ -80,8 +80,23 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.13.5 — a first run that cannot go quiet on you</span>
+            <span class="rel-ver">v0.13.6 — a development override stops being permanent</span>
             <span class="rel-tag">Latest release</span>
+            <span class="rel-date">Sep 9, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>The fix for &ldquo;the download arrived damaged&rdquo;, at its actual root.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>An override for one run no longer outlives it.</b> The app wrote the gateway&rsquo;s URL and checksum into the LaunchAgent it installs, so one launch from a developer shell pinned a local file path there permanently &mdash; where reinstalling the app could not reach it. Affected Macs heal themselves on the next launch.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The setup dialog stays dismissed</b> when you move between screens, and its clock keeps counting rather than starting over.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.13.5 — a first run that cannot go quiet on you</span>
+            <span class="rel-tag">Previous release</span>
             <span class="rel-date">Sep 9, 2026</span>
           </div>
           <div class="rel-card">
@@ -96,7 +111,7 @@
         <article class="release reveal">
           <div class="rel-meta">
             <span class="rel-ver">v0.13.4 — the first run tells you what it is doing</span>
-            <span class="rel-tag">Previous release</span>
+            <span class="rel-tag">Earlier release</span>
             <span class="rel-date">Sep 9, 2026</span>
           </div>
           <div class="rel-card">
