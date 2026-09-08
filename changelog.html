@@ -80,23 +80,25 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v1.0 — free lane, worktrees, Notes, Workflows, Skills, Plan</span>
+            <span class="rel-ver">v0.12.0 — the phone app, Orchestrator, Wiki, and workflows as sessions</span>
             <span class="rel-tag unreleased">Unreleased · building now</span>
-            <span class="rel-date">Sep 6–7, 2026</span>
+            <span class="rel-date">Sep 2026</span>
           </div>
           <div class="rel-card">
-            <h3>The whole app, rebuilt around a free lane that actually works.</h3>
-            <p style="color:var(--t3); font-size:14px; margin-bottom:14px">This is what's landed on <code>main</code> toward v1.0. Not released yet — no build has shipped
-              from this line, so treat every line below as in progress until the changelog says otherwise.</p>
+            <h3>A companion phone app, and the free lane rebuilt around unlimited sessions.</h3>
+            <p style="color:var(--t3); font-size:14px; margin-bottom:14px">This is what's landed on <code>main</code> since v0.11.0, toward v0.12.0. Not released yet — no
+              build has shipped from this line, so treat every line below as in progress until the changelog says otherwise.</p>
             <ul class="rel-list">
-              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Free lane, no key.</b> A keyless model pool routed by health, quality-first for coding by default, with automatic fallback when one stalls. Existing Claude Max, ChatGPT, Copilot and Gemini sign-ins now show up as lanes next to it.</span></li>
-              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Worktree per session.</b> Sessions isolate into their own git worktree and branch from main; the Changes / Diff / Terminal panel shows what moved, and Commit goes to main through a new merge queue instead of a bare push.</span></li>
-              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Notes.</b> A self-filling board: TODOs and FIXMEs, files under <code>.agenthub/tasks/</code>, open issues, failing tests and unfixed review findings each become a card, alongside anything typed by hand. Run turns a card into a session; Skip dismisses it until the source changes.</span></li>
-              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Workflows — Review, Build, Fix, Test, Release.</b> Five templates with automatic failover between lanes on a limit or gate failure, reported in one quiet line in the step's thread — never an error code, never a modal.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The phone app.</b> A real companion app (Expo/React Native, with a native Xcode project for iOS) — Inbox, Fleet, a session view and a real terminal. Pair it by scanning a QR from Settings › General › Pair on the Mac.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Free lane, no key, unlimited.</b> A keyless model pool routed by health, quality-first for coding by default, with automatic fallback when one stalls. Concurrent sessions and history are no longer capped on Free.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Worktree per session.</b> Sessions isolate into their own git worktree and branch from main; the Changes / Diff / Terminal panel shows what moved, and Commit goes to main through a merge queue instead of a bare push.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Workflows as sessions.</b> A workflow is now an ordinary session with a recipe — <code>/review /build /fix /test /release</code> — with its steps right in the transcript, and Notes collapsed into one list.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The Orchestrator.</b> Runs, briefs and subagents — a coordinator session can fan work out and track it as one Run.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The Wiki.</b> The agent's memory made visible — a health chip, a remember tool with inline undo, and automatic overview regeneration when the README or repo map changes.</span></li>
               <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Skills.</b> Six bundled (UI/UX Pro Max, terse, diagnosing bugs, code review &amp; quality, writing plans, performance optimization), toggled per project in Settings › Skills, plus Add from GitHub for your own.</span></li>
               <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Custom agents.</b> Register any CLI — it gets a worktree, a permission mode and a sidebar colour like any built-in agent.</span></li>
-              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Plan gating v1.</b> Free vs AgentHub Plan ceilings (concurrency, history, workflow fan-out, failover, fast context), checked from an offline licence key — no account, no server call.</span></li>
-              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Performance &amp; polish.</b> An inline repo map and a warm worktree pool for a faster first token, per-turn tool grouping, motion v3, wide-window layout, markdown-lite replies, and a fixed notification icon.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Plan v3.</b> Ed25519-signed offline licence keys (<code>AGH2-…</code>), with the v1/v2 formats still accepted for one more release. Free's real ceilings now: workflow fan-out, running more than one workflow at once, failover to a paid lane, and fast context.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Composer, redesigned.</b> A crisp ring, a one-row toolbar that never wraps, and even padding.</span></li>
             </ul>
           </div>
         </article>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AgentHub — free coding agents, no key, on your Mac</title>
-  <meta name="description" content="AgentHub runs coding agents on your Mac: a free lane with no API key, a worktree for every session, a task board that finds work in your repo, five workflow templates with automatic failover, and skills you can add from GitHub. v1.0 is coming." />
+  <meta name="description" content="AgentHub runs coding agents on your Mac: an unlimited free lane with no API key, a worktree for every session, a task board that finds work in your repo, five workflow templates with automatic failover, skills you can add from GitHub, and a phone app to watch and steer sessions from anywhere." />
   <meta name="theme-color" content="#0a0912" />
   <meta name="theme-color" content="#f3f2f9" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0a0912" media="(prefers-color-scheme: dark)" />
@@ -67,6 +67,7 @@
       <a href="#worktrees">Worktrees</a>
       <a href="#notes">Notes</a>
       <a href="#workflows">Workflows</a>
+      <a href="#mobile">Phone</a>
       <a href="#compare">Compare</a>
       <a href="plan/index.html">Plan</a>
       <a href="changelog.html">Changelog</a>
@@ -84,6 +85,7 @@
     <a href="#notes">Notes</a>
     <a href="#workflows">Workflows</a>
     <a href="#skills">Skills</a>
+    <a href="#mobile">Phone</a>
     <a href="#compare">Compare</a>
     <a href="plan/index.html">Plan</a>
     <a href="changelog.html">Changelog</a>
@@ -96,7 +98,7 @@
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <span class="eyebrow"><span class="dot"></span> AgentHub V4 · v1.0 coming</span>
+        <span class="eyebrow"><span class="dot"></span> AgentHub V4 · v0.11.0</span>
         <h1>A coding agent that's <span class="grad-text">free to run.</span></h1>
         <p class="hero-sub">
           No API key. No account. <b>Parallel sessions</b>, each in its own git worktree so they never
@@ -104,7 +106,7 @@
           provider.
         </p>
         <div class="hero-cta">
-          <a class="btn btn-primary btn-lg" href="#download">Download for Mac — v1.0 coming <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-primary btn-lg" href="#download">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
           <a class="btn btn-ghost btn-lg" href="#free">See how it works</a>
         </div>
         <div class="hero-meta">
@@ -113,7 +115,7 @@
           <span><svg aria-hidden="true"><use href="#i-lock"/></svg> Keys in your keychain</span>
         </div>
         <div class="hero-stats" aria-label="Live from the app, checked at build time">
-          <span class="star-chip"><svg aria-hidden="true"><use href="#i-spark"/></svg> 64 free models</span>
+          <span class="star-chip"><svg aria-hidden="true"><use href="#i-spark"/></svg> Unlimited free sessions</span>
           <span class="star-chip"><svg aria-hidden="true"><use href="#i-spark"/></svg> 5 workflows</span>
           <span class="star-chip"><svg aria-hidden="true"><use href="#i-spark"/></svg> 6 skills</span>
         </div>
@@ -366,28 +368,47 @@
     </div>
   </section>
 
+  <!-- ============ 6b. Phone app ============ -->
+  <section class="section-pad" id="mobile">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow"><span class="dot"></span> New</span>
+        <h2>Watch and steer sessions from your phone.</h2>
+        <p>AgentHub has a real phone app now, not just a browser tab. Open Settings &rsaquo; General &rsaquo;
+          Pair on the Mac, scan the QR with the phone, and it's paired — no account, no cloud relay to
+          sign into.</p>
+        <p>From there you can see what's running, answer a session that's waiting on you, and step in
+          through a real terminal, all without touching the keyboard on your Mac.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ 7. Plan ============ -->
   <section class="section-pad" id="plan">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow"><span class="dot"></span> Coming with v1.0</span>
+        <span class="eyebrow"><span class="dot"></span> Free vs Plan</span>
         <h2>Free forever. Plan lifts the ceilings.</h2>
-        <p>Free runs every template and every skill — it only ceilings the scale. Nothing is ever
-          missing on Free, it just has a limit.</p>
+        <p>Free runs every template and every skill, with unlimited sessions and history — it only
+          ceilings how far a review fans out, whether a workflow can run more than one at a time, and
+          whether a stuck step can fail over onto a paid lane. Nothing is ever missing on Free, it just
+          has a limit.</p>
       </div>
       <table class="plan-table">
         <caption>Free vs Plan</caption>
         <thead><tr><th>Ceiling</th><th>Free</th><th>Plan</th></tr></thead>
         <tbody>
-          <tr><td>Concurrent sessions</td><td class="free">2</td><td class="plan">Unlimited</td></tr>
+          <tr><td>Workflows running at once</td><td class="free">1</td><td class="plan">Unlimited</td></tr>
           <tr><td>Review fan-out</td><td class="free">2 lanes</td><td class="plan">5 lanes</td></tr>
           <tr><td>Failover to a paid lane</td><td class="free">No</td><td class="plan">Yes</td></tr>
+          <tr><td>Fast context on every lane</td><td class="free">No</td><td class="plan">Yes</td></tr>
+          <tr class="same"><td colspan="3">Sessions and history: unlimited on both.</td></tr>
         </tbody>
       </table>
       <div class="plan-cta-row">
-        <a class="btn btn-ghost" href="plan/index.html">See Free vs Plan in detail <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="plan/index.html">See Free vs Plan, and pricing <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
-      <p class="plan-note">Pricing and a buy button are coming with v1.0 — nothing to purchase yet.</p>
+      <p class="plan-note">Early-adopter pricing is live for the first 100 customers — see the Plan page. There's no checkout on the site yet.</p>
     </div>
   </section>
 
@@ -408,9 +429,9 @@
   <section class="cta-band" id="download">
     <div class="container">
       <h2>Free to run. No key needed.</h2>
-      <p>v1.0 is in progress — see what's shipping in the <a href="changelog.html" style="text-decoration:underline">changelog</a>.</p>
+      <p>v0.11.0 is out; v0.12.0 is in progress — see what's shipping in the <a href="changelog.html" style="text-decoration:underline">changelog</a>.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary btn-lg" href="#download" aria-label="Download for Mac — coming with v1.0">Download for Mac — v1.0 coming <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-primary btn-lg" href="#download" aria-label="Download for Mac">Download for Mac <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <a class="btn btn-ghost btn-lg" href="changelog.html">Read the changelog</a>
       </div>
       <p class="fine">macOS · Apple Silicon</p>
