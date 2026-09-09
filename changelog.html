@@ -80,8 +80,29 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.14.0 — the runtime ships inside the app</span>
+            <span class="rel-ver">v0.14.1 — work lands by itself</span>
             <span class="rel-tag">Latest release</span>
+            <span class="rel-date">Sep 9, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>Ask for a change, and it arrives on your branch. No button to press, nothing left behind.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Finished work merges into your branch on its own.</b> Sessions still run in their own checkout, so several can work at once without touching each other or whatever you have open in your editor &mdash; but you no longer have to know that. When a session finishes and the merge is safe, it lands, and the scratch branch and folder go with it. It only lands when landing is boring: the session ended cleanly, your checkout is still on the same branch and has nothing uncommitted, and the merge applies. Anything else stops and tells you what to do in one sentence. A conflict is never resolved for you.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Claude Pro / Max works again.</b> Anthropic now bills apps outside claude.ai against a separate &ldquo;extra usage&rdquo; balance rather than your plan, so that lane was being refused outright. AgentHub now runs Anthropic&rsquo;s own tool for it, billed against your plan the way your terminal is &mdash; and you keep the full transcript, the permission prompts and the cost of every turn.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The first reply comes three times sooner.</b> Starting a session used to read through your whole checkout once for every file it wanted to copy &mdash; over a million file reads on a large repository. On a real project, first words now arrive in 3.6&nbsp;seconds instead of 9.4.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Answers no longer arrive late and all at once.</b> A single event written by an older version could break the whole live update stream, so the screen stayed still until something else refreshed it.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>One interrupted scratch folder could stop a repository from making sessions at all</b> &mdash; and stay that way. It heals itself now.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The model you pick is the model that runs.</b> The Effort setting was quietly overriding it. And the free lane&rsquo;s three &ldquo;vision&rdquo; models can finally receive an image, instead of offering something they could not do.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The app stops saying &ldquo;this Mac is not supported&rdquo;</b> when what it means is that a file inside the app is missing. A free lane that will not start now gives up after two attempts rather than ninety seconds of silence, and setup progress stays visible after you dismiss the dialog.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The agent can read a URL.</b> It had no way to reach the network, so given a link it would go looking for a token and build its own command. Credentials never reach what it records.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.14.0 — the runtime ships inside the app</span>
+            <span class="rel-tag">Previous release</span>
             <span class="rel-date">Sep 9, 2026</span>
           </div>
           <div class="rel-card">
@@ -99,7 +120,6 @@
         <article class="release reveal">
           <div class="rel-meta">
             <span class="rel-ver">v0.13.6 — a development override stops being permanent</span>
-            <span class="rel-tag">Previous release</span>
             <span class="rel-date">Sep 9, 2026</span>
           </div>
           <div class="rel-card">
