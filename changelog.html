@@ -80,8 +80,23 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.15.0 &mdash; the &times; deletes the session</span>
+            <span class="rel-ver">v0.15.1 &mdash; the free lane starts on a Mac that downloaded the app</span>
             <span class="rel-tag">Latest release</span>
+            <span class="rel-date">Sep 10, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>Two fixes, both about a Mac that downloaded the app rather than built it.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The free lane starts.</b> macOS marks anything you download, and everything that app writes out of its own bundle inherits the mark. The free lane&rsquo;s runtime carries an unsigned helper, and macOS will not run a marked unsigned binary &mdash; it puts up a dialog naming the file. The lane needed it, never answered, and sat at &ldquo;Starting the free lane&rdquo; counting upward with nothing behind it. The mark is now cleared from the app&rsquo;s own payload as it is unpacked, and on a Mac already stuck, at the next start &mdash; so the new build is enough on its own. A Mac whose owner took the dialog&rsquo;s &ldquo;Move to Trash&rdquo; offer unpacks a fresh copy instead of waiting forever.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The details panel no longer opens over a first run.</b> It sits beside your work on a wide screen and covers it on a narrow one, and it was opening by default on both &mdash; so the first thing on a new install was a panel nobody opened, over the screen you came to look at.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.15.0 &mdash; the &times; deletes the session</span>
+            <span class="rel-tag">Previous release</span>
             <span class="rel-date">Sep 10, 2026</span>
           </div>
           <div class="rel-card">
