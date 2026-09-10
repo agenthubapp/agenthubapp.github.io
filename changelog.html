@@ -80,8 +80,23 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.15.1 &mdash; the free lane starts on a Mac that downloaded the app</span>
+            <span class="rel-ver">v0.15.2 &mdash; the free lane starts, and says so when it cannot</span>
             <span class="rel-tag">Latest release</span>
+            <span class="rel-date">Sep 10, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>The free lane used to sit at &ldquo;Starting&rdquo; counting upward, past four minutes, with nothing behind it.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The free lane starts on a Mac that downloaded the app.</b> The runtime carried a build tool&rsquo;s native binary, and macOS will not run an unsigned binary on a Mac that downloaded it &mdash; it puts up a dialog naming the file and refuses, and the lane waited on it forever. Nothing here needed that binary: it rode in as build-time weight, and it is gone. The download is 3&nbsp;MB smaller for it.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>A lane that cannot start now says so.</b> The screen could not tell you what had happened even though the daemon knew: it asked whether an install was in progress before asking whether starting had failed, and an installed lane counts as in progress. It now reports the failure and offers Try again, instead of a number that only ever goes up.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.15.1 &mdash; the free lane starts on a Mac that downloaded the app</span>
+            <span class="rel-tag">Previous release</span>
             <span class="rel-date">Sep 10, 2026</span>
           </div>
           <div class="rel-card">
