@@ -80,8 +80,25 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.15.2 &mdash; the free lane starts, and says so when it cannot</span>
+            <span class="rel-ver">v0.15.3 &mdash; the free lane starts</span>
             <span class="rel-tag">Latest release</span>
+            <span class="rel-date">Sep 10, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>It had been sitting at &ldquo;Starting the free lane&rdquo;, counting past four minutes, with nothing behind it.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The free lane starts.</b> The runtime carried a build tool&rsquo;s native binary, and macOS will not run an unsigned binary on a Mac that downloaded the app &mdash; on some Macs it put up a dialog about that file first. The lane was waiting on something that was never going to run. Nothing here called it, and it is gone.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Two things behind that, both of which kept the last attempt from working.</b> The download mark is cleared immediately before the lane starts rather than by a task racing it, and the unpacked runtime remembers which archive it came from &mdash; so a Mac still holding an older one gets a fresh copy instead of keeping the broken one through every reinstall.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>A lane that cannot start says so,</b> with a way to try again, instead of a number that only ever goes up.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The details panel stops covering the button that closes it.</b> On a window narrower than the docking width it ran the full height, over the top bar&rsquo;s right end, which is where its toggle lives.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.15.2 &mdash; the free lane starts, and says so when it cannot</span>
+            <span class="rel-tag">Previous release</span>
             <span class="rel-date">Sep 10, 2026</span>
           </div>
           <div class="rel-card">
