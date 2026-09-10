@@ -80,8 +80,27 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.14.4 &mdash; three things found by using it</span>
+            <span class="rel-ver">v0.14.6 &mdash; Auto finally means Auto</span>
             <span class="rel-tag">Latest release</span>
+            <span class="rel-date">Sep 10, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>Five things found by using 0.14.5, all of them fixed.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Auto stops asking about the session&rsquo;s own folder.</b> Every command the agent runs begins by naming its own worktree, and the guard read that as reaching somewhere it had no business &mdash; so every command asked, in both modes, and Auto never took effect on anything.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The compare picker steps out.</b> It shared the tab strip with Changes, Diff and Terminal, where it collapsed to a sliver too narrow to read. It is off until the control has a shape that fits.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The free lane stops flashing.</b> &ldquo;Starting the free lane&rdquo; appeared for a blink on every page that mounts it, on a Mac where the lane had been up for days. The health probe misses one beat when the gateway is busy answering, so the readout now waits for real silence.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>A finished answer stops blinking.</b> Leaving a session mid-answer cached the message with its streaming flag set, and coming back resumed the stream past the point that would have cleared it &mdash; so the caret blinked forever at the end of an answer finished hours ago.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>A path stops running downhill.</b> A tool row&rsquo;s label had no floor, so a long absolute path collapsed to one character per line and ran forty lines down the screen.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Codex now says when it is out.</b> It has no usage API, so the one moment it tells the truth is the refusal itself; the picker remembers the clock that refusal names and says &ldquo;Back 4:00 PM&rdquo; until it passes.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.14.4 &mdash; three things found by using it</span>
+            <span class="rel-tag">Previous release</span>
             <span class="rel-date">Sep 10, 2026</span>
           </div>
           <div class="rel-card">
