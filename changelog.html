@@ -80,8 +80,26 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.16.0 &mdash; no setup step</span>
+            <span class="rel-ver">v0.16.1 &mdash; skills that actually apply</span>
             <span class="rel-tag">Latest release</span>
+            <span class="rel-date">Sep 11, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>The skills you shipped now reach the model.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>A skill named by a phrase matches again.</b> A skill says when it applies &mdash; &ldquo;code review&rdquo;, &ldquo;merge conflict&rdquo;, &ldquo;root cause&rdquo;. Any of those made of more than one word never matched anything, so a third of the shipped list was unreachable.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>A matched skill survives to the prompt.</b> It used to sit at the end of the context block and be the first thing trimmed when the block ran long, so on a large repository it reached the model exactly never.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>A follow-up question matches skills too.</b> Skills were chosen once, when the session opened; asking something new mid-session brought none of them in.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Connect a repository sees your GitHub accounts.</b> It had been throwing away the indentation it needed to read them, so it found none and said your repositories could not be read.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>A card says an answer is needed only when one is.</b> A session that simply stopped now reads as needing a follow-up, and the words fit on one line.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The row menu opens.</b> It was drawn inside the card that clipped it, so it flickered under the pointer and could not be clicked.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.16.0 &mdash; no setup step</span>
             <span class="rel-date">Sep 10, 2026</span>
           </div>
           <div class="rel-card">
