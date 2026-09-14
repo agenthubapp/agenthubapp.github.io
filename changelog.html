@@ -80,8 +80,32 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.17.0 &mdash; sixteen free keys, and cards that tell the truth</span>
+            <span class="rel-ver">v0.17.1 &mdash; works on your branch, finds your pull requests</span>
             <span class="rel-tag">Latest release</span>
+            <span class="rel-date">Sep 14, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>Your branch, your pull requests, and a daemon that stays out of the way.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Sessions work on the branch you have checked out.</b> No worktree, no <code>ah/</code> branch, nothing committed for you &mdash; the agent edits the files you have open and you commit when you like. Worktree isolation is one switch away in Settings &rsaquo; Workspace.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Pull requests waiting for you show up even in repositories you never connected.</b> Every signed-in account is asked what is assigned to you or awaiting your review; the Deck offers to connect the repository and review it in one tap.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>A pull request is reviewed from its diff when this Mac has no clone.</b> The changed files are fetched at the head commit and reviewed on the code alone; the comment says so. Each repository has an Auto review switch and a Review now button.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Opening the app no longer restarts the daemon.</b> It used to kill and relaunch a healthy daemon and its gateway on every open; a cold open is now about eight seconds on an idle Mac.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Opening a session no longer reads the whole event log.</b> Every event now carries its session, so a replay reads that session&rsquo;s rows and nothing else. The daemon idles at ~110 MB instead of ~1 GB, and stays flat across a 30-minute soak.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>An unchanged task card writes nothing.</b> The scanner used to record ~44 events a minute while you did nothing; two thirds of the event log was that. Old events are also swept: unscoped after a day, archived sessions&rsquo; after a week.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>A dead gateway is respawned at once.</b> It is noticed within a second instead of at the next ten-second poll, the five-second wait before the first retry is gone, and a session you start while it boots waits for it instead of being refused.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Free models that cannot take your prompt step aside.</b> A &ldquo;request too large&rdquo; answer hops to another model once, like a usage limit; speech models never appear in the Free pool.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Candidates and the Critic run without asking.</b> A session stored without a mode used to fall back to Ask and stop for every <code>git diff</code>; it now runs in Auto, the default you see in the composer.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The composer stays put.</b> On a new session it is docked at the bottom from the start, with the welcome centered above it, so sending the first prompt no longer moves it. While the free lane boots, the chip shows a real percentage and the seconds left instead of a skeleton.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The Free keys card lists every provider.</b> No Show more, no inner scroll &mdash; the page scrolls, like the Free pool.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.17.0 &mdash; sixteen free keys, and cards that tell the truth</span>
+            <span class="rel-tag">Previous release</span>
             <span class="rel-date">Sep 14, 2026</span>
           </div>
           <div class="rel-card">
