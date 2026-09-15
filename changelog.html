@@ -80,8 +80,30 @@
 
         <article class="release reveal">
           <div class="rel-meta">
-            <span class="rel-ver">v0.17.1 &mdash; works on your branch, finds your pull requests</span>
+            <span class="rel-ver">v0.17.2 &mdash; the free lane stays free, and agents can find their way</span>
             <span class="rel-tag">Latest release</span>
+            <span class="rel-date">Sep 15, 2026</span>
+          </div>
+          <div class="rel-card">
+            <h3>Fixes found by watching real sessions fail, each measured before and after.</h3>
+            <ul class="rel-list">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The Free lane can no longer reach a paid OpenRouter model.</b> OpenRouter&rsquo;s router could pick paid models such as Claude Opus through a pasted key. Every paid model in the catalog is now excluded on the connection, so only <code>:free</code> models are eligible.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Agents find code in a single file.</b> On a Mac without ripgrep, searching one file always answered &ldquo;no matches&rdquo;, and a file only ever showed its first hit. Sessions that searched forever and wrote nothing now find what they look for.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The compiler speaks up only about your code.</b> The in-turn check tells the model its change does not compile only when the error points at a source line &mdash; not when a build script or a missing tool fails.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The Mission gate stops asking about files that are not files.</b> Property names, CSS values and code inside a brief no longer count as missing files, a name that matches two files is not &ldquo;missing&rdquo;, and &ldquo;delete&rdquo; only counts as risky when it is about data.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>How this ran tells the truth, and shows up at once.</b> Understood lists the files the brief names, Built reports the real diff, the step dots line up with their labels, and switching conversations no longer blanks the sheet.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>The Mission tab is readable.</b> Light cards per section with a status dot per row, instead of a dark code well with tiny grey chips.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Long messages stay inside the conversation.</b> A message with long code lines could push past the left edge when the side panel was open; it now stays in the column and its code scrolls.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Free models run at High effort by default.</b> Unless you pick another effort, and without leaving the Free lane.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span><b>Repository switches look like switches.</b> Auto review and Tests on each repository are labelled switches instead of buttons that read like commands.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="release reveal">
+          <div class="rel-meta">
+            <span class="rel-ver">v0.17.1 &mdash; works on your branch, finds your pull requests</span>
+            <span class="rel-tag">Previous release</span>
             <span class="rel-date">Sep 14, 2026</span>
           </div>
           <div class="rel-card">
